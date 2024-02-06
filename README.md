@@ -1,12 +1,12 @@
 #Wedding Details:
--Count down timer
 
-- ana baba adi turk katilimcilar icin? :D
+- Count down timer
+- Family Names
 - Date
 - Time
 - Location, mekanin fotosu
 - Dress Code
-- What to expect: nikah, yemek, BELLY DANCE!
+- What to expect: Wedding, Food & Belly Dance!
 - Parking
 - Map
 - Directions --> accommadation suggestion
@@ -20,7 +20,7 @@
 ###RSVP:
 
 - Confirmation of attendence
-- +1 durumu
+- Plus 1 Situation
 - Meal Preferences
 - Ask Dietary restrictions, allergies, or special requests.
 
