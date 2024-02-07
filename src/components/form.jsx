@@ -2,15 +2,17 @@ import { useState } from 'react';
 
 function Form() {
 	const [name, setName] = useState('');
+	const [guestName, setGuestName] = useState('');
 	const [email, setEmail] = useState('');
 	const [dietary, setDiatary] = useState('Non-Vegetarian');
 	const [attending, setAttending] = useState(false);
+	const [plusOne, setPlusOne] = useState(false);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
 			console.log(
-				`Your name is ${name}, your email is ${email}, Your dietary is ${dietary}, are you going to attend wedding? = ${attending}`
+				`Your name is ${name}, your email is ${email}, Your dietary is ${dietary}, are you going to attend wedding? = ${attending}, Do you have a plus one? ${plusOne}, if true, your plus one name is ${guestName}`
 			);
 		} catch (error) {
 			console.error('zort');
@@ -56,6 +58,30 @@ function Form() {
 					}}
 					checked={attending}
 				/>
+				<br />
+				Plus 1?:
+				<input
+					type="checkbox"
+					onChange={(e) => {
+						setPlusOne(e.target.checked);
+					}}
+					checked={plusOne}
+				/>
+				{plusOne && (
+					<>
+						<br />
+						Guest Name:{' '}
+						<input
+							onChange={(e) => {
+								setGuestName(e.target.value);
+							}}
+							value={guestName}
+							placeholder="Enter guest name please"
+						/>
+						<br />
+					</>
+				)}
+				<br />
 				<button>Click to Submit</button>
 			</form>
 		</div>
