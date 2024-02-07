@@ -7,15 +7,24 @@ function Form() {
 	const [dietary, setDiatary] = useState('Non-Vegetarian');
 	const [attending, setAttending] = useState(false);
 	const [plusOne, setPlusOne] = useState(false);
+	const [plusOneDietary, setPlusOneDietary] = useState('Non Vegetarian');
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
 			console.log(
-				`Your name is ${name}, your email is ${email}, Your dietary is ${dietary}, are you going to attend wedding? = ${attending}, Do you have a plus one? ${plusOne}, if true, your plus one name is ${guestName}`
+				`Your name is ${name}, your email is ${email}, Your dietary is ${dietary}, are you going to attend wedding? = ${attending}, Do you have a plus one? ${plusOne}, if true, your plus one name is ${guestName} and their dietary is ${plusOneDietary}`
 			);
 		} catch (error) {
 			console.error('zort');
+		}
+	};
+
+	const handlePlusOneChange = (e) => {
+		setPlusOne(e.target.checked);
+		if (!e.target.checked) {
+			setGuestName('');
+			setPlusOneDietary('Non-Vegetarian');
 		}
 	};
 
@@ -59,26 +68,38 @@ function Form() {
 					checked={attending}
 				/>
 				<br />
-				Plus 1?:
-				<input
-					type="checkbox"
-					onChange={(e) => {
-						setPlusOne(e.target.checked);
-					}}
-					checked={plusOne}
-				/>
-				{plusOne && (
+				{attending && (
 					<>
-						<br />
-						Guest Name:{' '}
+						Plus 1?:
 						<input
-							onChange={(e) => {
-								setGuestName(e.target.value);
-							}}
-							value={guestName}
-							placeholder="Enter guest name please"
+							type="checkbox"
+							onChange={handlePlusOneChange}
+							checked={plusOne}
 						/>
-						<br />
+						{plusOne && (
+							<>
+								<br />
+								Guest Name:{' '}
+								<input
+									onChange={(e) => {
+										setGuestName(e.target.value);
+									}}
+									value={guestName}
+									placeholder="Enter guest name please"
+								/>
+								<br />
+								Guest Dietary:{' '}
+								<select
+									onChange={(e) => {
+										setPlusOneDietary(e.target.value);
+									}}
+									value={plusOneDietary}
+								>
+									<option value="Vegetarian">Vegetarian</option>
+									<option value="Non-vegetarian">Non-Vegetarian</option>
+								</select>
+							</>
+						)}
 					</>
 				)}
 				<br />
