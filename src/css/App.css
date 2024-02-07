@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #BDC3C7;
+  font-family: 'Raleway';
 }
 
 .App-logo {

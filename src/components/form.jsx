@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Form() {
 	const [name, setName] = useState('');
 	const [guestName, setGuestName] = useState('');
 	const [email, setEmail] = useState('');
-	const [dietary, setDiatary] = useState('Non-Vegetarian');
+	const [dietary, setDiatary] = useState('Vegetarian');
 	const [attending, setAttending] = useState(false);
 	const [plusOne, setPlusOne] = useState(false);
-	const [plusOneDietary, setPlusOneDietary] = useState('Non Vegetarian');
+	const [plusOneDietary, setPlusOneDietary] = useState('Vegetarian');
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -20,6 +21,17 @@ function Form() {
 		}
 	};
 
+	let navigate = useNavigate();
+
+	const regretButton = async (e) => {
+		e.preventDefault();
+		try {
+			navigate(`/`);
+		} catch (error) {
+			console.error('zort regret');
+		}
+	};
+
 	const handlePlusOneChange = (e) => {
 		setPlusOne(e.target.checked);
 		if (!e.target.checked) {
@@ -29,9 +41,14 @@ function Form() {
 	};
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				Name:{' '}
+		<div className="form">
+			<div className="info">
+				<h1>RSVP</h1>
+				<h2>for the wedding of</h2>
+				<h1>Ece & Mert</h1>
+				<hr />
+			</div>
+			<form className="form" onSubmit={handleSubmit}>
 				<input
 					onChange={(e) => {
 						setName(e.target.value);
@@ -40,7 +57,6 @@ function Form() {
 					placeholder="Enter your full name please"
 				/>
 				<br />
-				Email:
 				<input
 					onChange={(e) => {
 						setEmail(e.target.value);
@@ -50,6 +66,7 @@ function Form() {
 				/>
 				<br />
 				Dietary:
+				<br />
 				<select
 					onChange={(e) => {
 						setDiatary(e.target.value);
@@ -103,7 +120,12 @@ function Form() {
 					</>
 				)}
 				<br />
-				<button>Click to Submit</button>
+				<div className="buttons">
+					<button className="submit-button">Submit</button>
+					<button className="regret-button" onClick={regretButton}>
+						Regret
+					</button>
+				</div>
 			</form>
 		</div>
 	);
