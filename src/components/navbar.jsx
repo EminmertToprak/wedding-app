@@ -2,26 +2,31 @@ import '../css/navbar.css';
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Logo from '../images/initials.png';
 
 function Navbar() {
+	const [showMenu, setShowMenu] = useState(false);
+
+	const toggleMenu = () => {
+		setShowMenu(!showMenu);
+	};
+
 	return (
 		<div className="navbar">
-			<img
-				src="https://static.theknot.com/guest-flourish/lockup/initials?firstName=Eileen&fianceFirstName=Matthew&themeId=3379"
-				alt="logo"
-			/>
-			<Link to="/">
-				<button>Home</button>
-			</Link>
-			<Link to="/rsvp">
-				<button>RSVP</button>
-			</Link>
-			<Link to="/faq">
-				<button>FAQ</button>
-			</Link>
-			<Link to="/location">
-				<button>Location</button>
-			</Link>
+			<div className="menu-items">
+				<Link className="menu-button" to="/" onClick={toggleMenu}>
+					<p>Home</p>
+				</Link>
+				<Link className="menu-button" to="/rsvp" onClick={toggleMenu}>
+					RSVP
+				</Link>
+				<Link className="menu-button" to="/faq" onClick={toggleMenu}>
+					FAQ
+				</Link>
+				<Link className="menu-button" to="/location" onClick={toggleMenu}>
+					Location
+				</Link>
+			</div>
 		</div>
 	);
 }

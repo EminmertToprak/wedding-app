@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import flowerTopLeft from '../images/flowers_top_left.png';
+import flowerTopRight from '../images/flowers_top_right.png';
+import flowerBottomLeft from '../images/flowers_bottom_left.png';
+import flowerBottomRight from '../images/flowers_bottom_right.png';
 
 function Form() {
 	const [name, setName] = useState('');
@@ -41,93 +45,122 @@ function Form() {
 	};
 
 	return (
-		<div className="form">
-			<div className="info">
-				<h1>RSVP</h1>
-				<h2>for the wedding of</h2>
-				<h1>Ece & Mert</h1>
-				<hr />
-			</div>
-			<form className="form" onSubmit={handleSubmit}>
-				<input
-					onChange={(e) => {
-						setName(e.target.value);
-					}}
-					value={name}
-					placeholder="Enter your full name please"
+		<>
+			<div className="form-div">
+				<img
+					className="top-left-flower"
+					src={flowerTopLeft}
+					alt="flower_top_left"
 				/>
-				<br />
-				<input
-					onChange={(e) => {
-						setEmail(e.target.value);
-					}}
-					value={email}
-					placeholder="Enter your email please"
+				<img
+					className="top-right-flower"
+					src={flowerTopRight}
+					alt="flower_top_right"
 				/>
-				<br />
-				Dietary:
-				<br />
-				<select
-					onChange={(e) => {
-						setDiatary(e.target.value);
-					}}
-				>
-					<option value="Vegetarian">Vegetarian</option>
-					<option value="Non-vegetarian">Non-Vegetarian</option>
-				</select>
-				<br />
-				Attending?:
-				<input
-					type="checkbox"
-					onChange={(e) => {
-						setAttending(e.target.checked);
-					}}
-					checked={attending}
+				<img
+					className="bottom-left-flower"
+					src={flowerBottomLeft}
+					alt="flower_bottom_left"
 				/>
-				<br />
-				{attending && (
-					<>
-						Plus 1?:
+				<img
+					className="bottom-right-flower"
+					src={flowerBottomRight}
+					alt="flower_bottom_right"
+				/>
+				<div className="form-main">
+					<div className="info">
+						<h1>RSVP</h1>
+						<h2>for the wedding of</h2>
+						<h1>Ece & Mert</h1>
+						<hr />
+					</div>
+					<form className="form-info" onSubmit={handleSubmit}>
+						<input
+							onChange={(e) => {
+								setName(e.target.value);
+							}}
+							value={name}
+							placeholder="Enter your full name please"
+						/>
+						<input
+							onChange={(e) => {
+								setEmail(e.target.value);
+							}}
+							value={email}
+							placeholder="Enter your email please"
+						/>
+						<br />
+						<h4>Dietary:</h4>
+						<select
+							onChange={(e) => {
+								setDiatary(e.target.value);
+							}}
+						>
+							<option value="Vegetarian">Vegetarian</option>
+							<option value="Non-vegetarian">Non-Vegetarian</option>
+						</select>
+						<br />
+						<h4>Attending?:</h4>
 						<input
 							type="checkbox"
-							onChange={handlePlusOneChange}
-							checked={plusOne}
+							onChange={(e) => {
+								setAttending(e.target.checked);
+							}}
+							checked={attending}
 						/>
-						{plusOne && (
+						<br />
+						{attending && (
 							<>
-								<br />
-								Guest Name:{' '}
+								Plus 1?:
 								<input
-									onChange={(e) => {
-										setGuestName(e.target.value);
-									}}
-									value={guestName}
-									placeholder="Enter guest name please"
+									type="checkbox"
+									onChange={handlePlusOneChange}
+									checked={plusOne}
 								/>
-								<br />
-								Guest Dietary:{' '}
-								<select
-									onChange={(e) => {
-										setPlusOneDietary(e.target.value);
-									}}
-									value={plusOneDietary}
-								>
-									<option value="Vegetarian">Vegetarian</option>
-									<option value="Non-vegetarian">Non-Vegetarian</option>
-								</select>
+								{plusOne && (
+									<>
+										<br />
+										Guest Name:{' '}
+										<input
+											onChange={(e) => {
+												setGuestName(e.target.value);
+											}}
+											value={guestName}
+											placeholder="Enter guest name please"
+										/>
+										<br />
+										Guest Dietary:{' '}
+										<select
+											onChange={(e) => {
+												setPlusOneDietary(e.target.value);
+											}}
+											value={plusOneDietary}
+										>
+											<option value="Vegetarian">Vegetarian</option>
+											<option value="Non-vegetarian">Non-Vegetarian</option>
+										</select>
+									</>
+								)}
 							</>
 						)}
-					</>
-				)}
-				<br />
-				<div className="buttons">
-					<button className="submit-button">Submit</button>
-					<button className="regret-button" onClick={regretButton}>
-						Regret
-					</button>
+
+						<div className="buttons">
+							<button className="submit-button">Submit</button>
+							<button className="regret-button" onClick={regretButton}>
+								Regret
+							</button>
+						</div>
+						<aside>
+							*Please keep in touch with your guest so there won't be double
+							entry
+						</aside>
+						<aside>
+							**If you have any alergens please reach Ece via her email!
+						</aside>
+					</form>
 				</div>
-			</form>
-		</div>
+			</div>
+		</>
 	);
 }
 

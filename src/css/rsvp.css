@@ -1,5 +1,13 @@
-.form {
-    height: 590px;
+body{
+    background-color: #bdd7d4;
+}
+
+.form-div {
+    overflow-y: hidden;
+}
+
+.form-main {
+    height: 610px;
     width: 400px;
     background-color: #fff;
     margin: auto;
@@ -8,8 +16,66 @@
     padding: 0px 0px;
     box-shadow: 2px 2px 4px rgb(0, 0, 0, .25);
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    z-index: 9997;
+}
+
+.top-left-flower {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+    top: 0px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    z-index: 9998;
+}
+
+.top-right-flower {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    right: 0px;
+    top: 0px;
+    display: block;
+    /* width: 37%; */
+    max-height: 40%;
+    max-width: 50%;
+}
+
+.bottom-left-flower {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 0px;
+    bottom: 0px;
+    display: block;
+    /* width: 35%; */
+    max-height: 40%;
+    max-width: 50%;
+}
+
+.bottom-right-flower {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    /* width: 32%; */
+    max-height: 40%;
+    max-width: 50%;
+}
+
+.form-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .info {
@@ -36,13 +102,27 @@ h2 {
     font-weight: 100;
 }
 
-.form input select {
+h4 {
+    margin:0;
+    margin-bottom: 10px;
+}
+
+input {
     font-size: 15px;
     color: #666;
     padding: 6px;
-    margin: 25px auto 20px;
+    margin: 0px auto 10px;
     display: block;
-    width: 75%;  
+    width: 65%;    
+}
+
+select {
+    font-size: 15px;
+    color: #666;
+    padding: 6px;
+    margin: 0px auto 0px;
+    display: block;
+    width: 65%;    
 }
 
 input:focus {
@@ -62,25 +142,34 @@ button {
     font-size: 18px;
     font-weight: 600;
     padding: 15px 32px;
-    width: 200px;
+    width: 180px;
     margin: 20px auto 20px auto;
 }
 
 button.submit-button {
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
     border-right: solid 1px white;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 button.regret-button {
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .submit-button:hover {
-background-color: rgb(127, 212, 212);
+background-color: #bdd7d4;
+color: #333;
+border: 1px solid gray;
 transition: .5s;
 }
 
 .regret-button:hover {
     background-color: rgb(204, 67, 67);
+    border: 1px solid gray;
     transition: .5s;
     }
