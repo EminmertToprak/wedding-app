@@ -1,12 +1,8 @@
-import { useState, useEffect, useContext } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
-import dateGif from '../images/2024.gif';
-
+import dateGif from '../images/2024_white.gif';
 import Navbar from '../components/navbar';
 import '../css/Homepage.css';
 
@@ -35,6 +31,9 @@ function Homepage(props) {
 					src={flowerBottomRight}
 					alt="flower_bottom_right"
 				/>
+				<a class="downarrowlinkblock w-inline-block" href="#OurStory">
+					<img src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/5790ef97ed3b49f647da0198_Arrow.png" />
+				</a>
 			</header>
 			<div class="ourstory" id="OurStory">
 				<div class="ourstoryinner w-container">
@@ -72,6 +71,7 @@ function Homepage(props) {
 					<img
 						class="ourstorybreak"
 						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
+						alt="Our Story Break"
 					/>
 					<div class="body1">
 						We wanted to do our wedding in Ayvalık/Sarımsaklı because it's where
@@ -87,20 +87,39 @@ function Homepage(props) {
 					<img
 						class="ourstorybreak"
 						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
+						alt="ourstorybreak"
 					/>
+					<h2 className="save-the-date">Save The Date!</h2>
 					<div className="time-and-date">
-						<h2>Date & Time</h2>
-						<div className="time">
-							<img src={dateGif} alt="" />
+						<div className="time-and-date-container">
+							<div className="date">
+								<img src={dateGif} alt="date" />
+							</div>
 						</div>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
-							quam magnam similique deserunt, pariatur ducimus amet harum neque
-							corrupti possimus cupiditate dolorum modi minus nisi!
-						</p>
+						<div className="time">
+							<div className="wedding-ceramony">
+								<h2>Wedding Ceramony: </h2>
+								<h4>19:30</h4>
+								{/* <img src={wedding} alt="" /> */}
+							</div>
+							<div className="party">
+								<h2>Party: </h2>
+								<h4>20:30</h4>
+								{/* <img src={party} alt="" /> */}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<footer>
+				<p class="made-with-love">
+					Made with{''}
+					<i class="heart" aria-label="love">
+						&#10084;
+					</i>{' '}
+					by <a href="https://mert-toprak.netlify.app/">Mert Toprak</a>
+				</p>
+			</footer>
 		</>
 	);
 }

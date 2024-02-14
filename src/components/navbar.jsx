@@ -1,8 +1,6 @@
 import '../css/navbar.css';
-import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../images/initials.png';
 
 function Navbar() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -22,6 +20,9 @@ function Navbar() {
 				</Link>
 				<Link className="menu-button" to="/faq" onClick={toggleMenu}>
 					FAQ
+				</Link>
+				<Link className="menu-button" to="/contact" onClick={toggleMenu}>
+					Contact
 				</Link>
 				<Link className="menu-button" to="/location" onClick={toggleMenu}>
 					Location

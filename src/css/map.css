@@ -1,9 +1,4 @@
 .map {
-    height: 50vh;
-    width: 50vw;
+    position: relative;
+    border: 1px red solid;
   }
-
-.map-container {
-    height: 100%;
-    width: 100%;
-}
