@@ -5,6 +5,7 @@ import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
+import dateGif from '../images/2024.gif';
 
 import Navbar from '../components/navbar';
 import '../css/Homepage.css';
@@ -56,18 +57,17 @@ function Homepage(props) {
 						<em>
 							<strong>She said,</strong>
 						</em>{' '}
-						"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis,
-						corporis. Sed aperiam nemo ipsa distinctio modi neque. Sunt,
-						blanditiis enim dignissimos deleniti possimus dolores, voluptatem
-						velit, quasi fugit unde suscipit iusto! Provident atque vel saepe
-						harum vitae ratione explicabo itaque maiores quibusdam deleniti
-						voluptas necessitatibus eum qui, officiis assumenda enim ut aliquid
-						dolore nulla dolor minus laboriosam odit ipsum? Rerum dolore
-						repellendus deserunt minus aperiam ratione aut, consectetur optio
-						quaerat perspiciatis maiores distinctio, voluptatem autem reiciendis
-						minima non illum, ipsam molestias delectus tenetur quibusdam nihil?
-						Alias porro iusto quod sequi vero. Possimus laborum sapiente itaque
-						sunt inventore ab iure quas!"
+						"As soon as I met him, I was charmed by his warm smile. In addition
+						to being my significant other, he became my family, and my best
+						friend of all time. In the early days of my decision to begin a new
+						life abroad, he was my biggest supporter, and despite the fact that
+						we were over 2000 kilometers away from our family and homeland, he
+						helped me to create a comfortable new place with his love and
+						patience. We have been sharing a lot of things together despite the
+						fact that we are different from each other. Now, as I look forward
+						to our new adventures in life, you will be our beloved witnesses at
+						the beginning of the new phase of our life as we begin
+						our next chapter."
 					</div>
 					<img
 						class="ourstorybreak"
@@ -88,9 +88,11 @@ function Homepage(props) {
 						class="ourstorybreak"
 						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
 					/>
-					<div className="location">
+					<div className="time-and-date">
 						<h2>Date & Time</h2>
-						<h3>Lorem ipsum dolor sit amet.</h3>
+						<div className="time">
+							<img src={dateGif} alt="" />
+						</div>
 						<p>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
 							quam magnam similique deserunt, pariatur ducimus amet harum neque
