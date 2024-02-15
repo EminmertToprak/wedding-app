@@ -4,6 +4,7 @@ import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 import dateGif from '../images/2024_white.gif';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import '../css/Homepage.css';
 
 function Homepage(props) {
@@ -31,14 +32,14 @@ function Homepage(props) {
 					src={flowerBottomRight}
 					alt="flower_bottom_right"
 				/>
-				<a class="downarrowlinkblock w-inline-block" href="#OurStory">
+				<a className="downarrowlinkblock w-inline-block" href="#OurStory">
 					<img src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/5790ef97ed3b49f647da0198_Arrow.png" />
 				</a>
 			</header>
-			<div class="ourstory" id="OurStory">
-				<div class="ourstoryinner w-container">
-					<h1 class="headline1">Our Story</h1>
-					<div class="body1">
+			<div className="ourstory" id="OurStory">
+				<div className="ourstoryinner w-container">
+					<h1 className="headline1">Our Story</h1>
+					<div className="body1">
 						<em>
 							<strong>He said,</strong>
 						</em>{' '}
@@ -52,7 +53,7 @@ function Homepage(props) {
 						Thinking about what's ahead, I can't help but feel super excited,
 						knowing Ece will always be there with me."
 					</div>
-					<div class="body1">
+					<div className="body1">
 						<em>
 							<strong>She said,</strong>
 						</em>{' '}
@@ -69,11 +70,11 @@ function Homepage(props) {
 						our next chapter."
 					</div>
 					<img
-						class="ourstorybreak"
+						className="ourstorybreak"
 						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
 						alt="Our Story Break"
 					/>
-					<div class="body1">
+					<div className="body1">
 						We wanted to do our wedding in Ayvalık/Sarımsaklı because it's where
 						Mert grew up, and for Ece, anywhere with sun, beach, and sea is a
 						dream. That's why we wanted to share it with all of you. We hope
@@ -85,7 +86,7 @@ function Homepage(props) {
 						celebration!
 					</div>
 					<img
-						class="ourstorybreak"
+						className="ourstorybreak"
 						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
 						alt="ourstorybreak"
 					/>
@@ -111,15 +112,7 @@ function Homepage(props) {
 					</div>
 				</div>
 			</div>
-			<footer>
-				<p class="made-with-love">
-					Made with{''}
-					<i class="heart" aria-label="love">
-						&#10084;
-					</i>{' '}
-					by <a href="https://mert-toprak.netlify.app/">Mert Toprak</a>
-				</p>
-			</footer>
+			<Footer />
 		</>
 	);
 }

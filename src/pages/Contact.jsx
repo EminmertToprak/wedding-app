@@ -1,4 +1,5 @@
 import '../css/contact.css';
+import Footer from '../components/footer';
 
 import Navbar from '../components/navbar';
 
@@ -7,6 +8,7 @@ function Contact(props) {
 		<>
 			<Navbar />
 			<div></div>
+			<Footer />
 		</>
 	);
 }

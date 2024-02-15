@@ -1,5 +1,5 @@
 import '../css/faq.css';
-
+import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 
 function FAQ(props) {
@@ -31,6 +31,7 @@ function FAQ(props) {
 					</ul>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

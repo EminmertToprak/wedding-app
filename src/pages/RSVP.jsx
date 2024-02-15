@@ -1,5 +1,6 @@
 import Navbar from '../components/navbar';
 import Form from '../components/form';
+import Footer from '../components/footer';
 import '../css/rsvp.css';
 
 function RSVP() {
@@ -9,6 +10,7 @@ function RSVP() {
 			<div className="div-form">
 				<Form />
 			</div>
+			<Footer />
 		</>
 	);
 }
