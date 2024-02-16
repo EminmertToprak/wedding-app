@@ -4,13 +4,16 @@ import RSVP from './pages/RSVP';
 import FAQ from './pages/FAQ';
 import Location from './pages/Location';
 import Contact from './pages/Contact';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 import './css/App.css';
 
 function App() {
 	return (
 		<>
-			<div>
+			<div className="App">
+				<Navbar />
 				<Routes>
 					<Route path="/" element={<Homepage />} />
 					<Route path="/rsvp" element={<RSVP />} />
@@ -18,6 +21,7 @@ function App() {
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/location" element={<Location />} />
 				</Routes>
+				<Footer />
 			</div>
 		</>
 	);

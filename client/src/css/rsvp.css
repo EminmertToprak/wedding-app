@@ -186,3 +186,37 @@ aside {
     justify-content: center;
 }
 
+.popup {
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+
+  .popup .popuptext {
+    visibility: hidden;
+    position: absolute;
+    background-color: #bdd7d4;
+    color: #333;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 8px;
+  }
+
+.popup .show {
+  visibility: visible;
+}
+
+/* Add animation (fade in the popup)
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+} */

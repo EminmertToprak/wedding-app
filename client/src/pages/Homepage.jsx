@@ -3,15 +3,12 @@ import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 import dateGif from '../images/2024_white.gif';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 import '../css/Homepage.css';
 
 function Homepage(props) {
 	return (
 		<>
 			<header className="images">
-				<Navbar />
 				<img
 					className="top-left-flower"
 					src={flowerTopLeft}
@@ -33,7 +30,10 @@ function Homepage(props) {
 					alt="flower_bottom_right"
 				/>
 				<a className="downarrowlinkblock w-inline-block" href="#OurStory">
-					<img src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/5790ef97ed3b49f647da0198_Arrow.png" />
+					<img
+						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/5790ef97ed3b49f647da0198_Arrow.png"
+						alt="ourstory"
+					/>
 				</a>
 			</header>
 			<div className="ourstory" id="OurStory">
@@ -101,18 +101,15 @@ function Homepage(props) {
 							<div className="wedding-ceramony">
 								<h2>Wedding Ceramony: </h2>
 								<h4>19:30</h4>
-								{/* <img src={wedding} alt="" /> */}
 							</div>
 							<div className="party">
 								<h2>Party: </h2>
 								<h4>20:30</h4>
-								{/* <img src={party} alt="" /> */}
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 }

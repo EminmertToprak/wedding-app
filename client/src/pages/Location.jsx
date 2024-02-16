@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 import Map from '../components/map';
 import '../css/location.css';
 
@@ -9,11 +7,9 @@ const Location = () => {
 
 	return (
 		<>
-			<Navbar />
 			<div className="location">
 				<h1>Wedding Location</h1>
 				<Map address={address} />
-				<Footer />
 			</div>
 		</>
 	);

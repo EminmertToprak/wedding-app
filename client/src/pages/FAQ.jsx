@@ -1,11 +1,8 @@
 import '../css/faq.css';
-import Footer from '../components/footer';
-import Navbar from '../components/navbar';
 
 function FAQ(props) {
 	return (
 		<>
-			<Navbar />
 			<div>
 				<div>
 					<h1>Frequently Asked Questions</h1>
@@ -31,7 +28,6 @@ function FAQ(props) {
 					</ul>
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 }
