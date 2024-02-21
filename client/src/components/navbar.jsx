@@ -18,14 +18,14 @@ function Navbar() {
 				<Link className="menu-button" to="/rsvp" onClick={toggleMenu}>
 					RSVP
 				</Link>
-				<Link className="menu-button" to="/faq" onClick={toggleMenu}>
-					FAQ
+				<Link className="menu-button" to="/location" onClick={toggleMenu}>
+					Location
 				</Link>
 				<Link className="menu-button" to="/contact" onClick={toggleMenu}>
 					Contact
 				</Link>
-				<Link className="menu-button" to="/location" onClick={toggleMenu}>
-					Location
+				<Link className="menu-button" to="/faq" onClick={toggleMenu}>
+					FAQ
 				</Link>
 			</div>
 		</div>

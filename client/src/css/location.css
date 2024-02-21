@@ -1,3 +1,91 @@
 .location {
-    margin-top: 75px
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    z-index: 9998;
+}
+
+.map-image {
+    width: 500px;
+    height: 500px;
+    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+}
+
+.hotels {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    z-index: 9997;
+}
+
+.hotel {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-image {
+    width: 300px;
+    height: auto;
+    border-radius: 20%;
+}
+
+.top-left-flower-location {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+    top: 0px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+    z-index: 9995;
+}
+
+.top-right-flower-location {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    right: 0px;
+    top: 0px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+    z-index: 9995;
+}
+
+.bottom-left-flower-location {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 0px;
+    bottom: -450px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+    z-index: 9995;
+}
+
+.bottom-right-flower-location {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    right: 0px;
+    bottom: -450px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+    z-index: 9995;
 }

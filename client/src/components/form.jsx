@@ -8,6 +8,7 @@ import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 
 import '../css/rsvp.css';
+import '../css/footer.css';
 
 // const apiUrl = 'localhost:3000/rsvp';
 
@@ -88,22 +89,22 @@ function Form() {
 		<>
 			<div className="form-div">
 				<img
-					className="top-left-flower"
+					className="top-left-flower-form"
 					src={flowerTopLeft}
 					alt="flower_top_left"
 				/>
 				<img
-					className="top-right-flower"
+					className="top-right-flower-form"
 					src={flowerTopRight}
 					alt="flower_top_right"
 				/>
 				<img
-					className="bottom-left-flower"
+					className="bottom-left-flower-form"
 					src={flowerBottomLeft}
 					alt="flower_bottom_left"
 				/>
 				<img
-					className="bottom-right-flower"
+					className="bottom-right-flower-form"
 					src={flowerBottomRight}
 					alt="flower_bottom_right"
 				/>

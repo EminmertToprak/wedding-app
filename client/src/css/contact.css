@@ -1,0 +1,79 @@
+.top-left-flower-contact {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+    top: 0px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+}
+
+.top-right-flower-contact {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    right: 0px;
+    top: 0px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+}
+
+.bottom-left-flower-contact {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 0px;
+    bottom: -250px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+}
+
+.bottom-right-flower-contact {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    right: 0px;
+    bottom: -250px;
+    display: block;
+    max-height: 40%;
+    max-width: 50%;
+    opacity: 30%;
+}
+
+.contacts {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ece-mert {
+    width: 250px;
+}
+
+.image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+    border-radius: 50%;
+}
+
+.wedding-place {
+    margin-bottom:25px;
+}
+
+sup {
+    font-style: italic;
+}
+
+#footer {
+    position: relative;
+    top: 0%;
+}

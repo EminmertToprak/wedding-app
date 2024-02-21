@@ -1,8 +1,8 @@
 .form-div{
     position: absolute;
     overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .form-main {
@@ -24,7 +24,7 @@
     z-index: 9997;
 }
 
-.top-left-flower {
+.top-left-flower-form {
     position: absolute;
     padding: 0px;
     margin: 0px;
@@ -36,7 +36,7 @@
     z-index: 9998;
 }
 
-.top-right-flower {
+.top-right-flower-form {
     position: absolute;
     padding: 0px;
     margin: 0px;
@@ -48,7 +48,7 @@
     max-width: 50%;
 }
 
-.bottom-left-flower {
+.bottom-left-flower-form {
     position: absolute;
     padding: 0px;
     margin: 0px;
@@ -61,7 +61,7 @@
     
 }
 
-.bottom-right-flower {
+.bottom-right-flower-form {
     position: absolute;
     padding: 0px;
     margin: 0px;

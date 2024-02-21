@@ -4,11 +4,13 @@ import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 import dateGif from '../images/2024_white.gif';
 import '../css/Homepage.css';
+import '../css/footer.css';
+import Footer from '../components/footer';
 
 function Homepage(props) {
 	return (
 		<>
-			<header className="images">
+			<div className="images">
 				<img
 					className="top-left-flower"
 					src={flowerTopLeft}
@@ -35,7 +37,7 @@ function Homepage(props) {
 						alt="ourstory"
 					/>
 				</a>
-			</header>
+			</div>
 			<div className="ourstory" id="OurStory">
 				<div className="ourstoryinner w-container">
 					<h1 className="headline1">Our Story</h1>
@@ -107,6 +109,7 @@ function Homepage(props) {
 								<h4>20:30</h4>
 							</div>
 						</div>
+						<Footer />
 					</div>
 				</div>
 			</div>

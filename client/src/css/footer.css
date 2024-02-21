@@ -1,0 +1,16 @@
+.footer {
+    position: absolute;
+    top:99%;
+    width: 100%;
+    height: 2.5rem;
+    background: transparent; 
+  }
+  
+.footer a {
+    text-decoration: none;
+    color: #333
+  }
+  
+div i {
+    color: #ffc1f3;
+  }

@@ -1,6 +1,7 @@
 .faq {
-    margin-top: 100px;
     z-index: 9999;
+    overflow: hidden;
+    margin: 250px 50px 100px 50px
 }
 .faq ul li {
     list-style-type: none;
@@ -35,7 +36,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: 0px;
+    bottom: -100px;
     display: block;
     max-height: 40%;
     max-width: 50%;
@@ -47,7 +48,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: 0px;
+    bottom: -100px;
     display: block;
     max-height: 40%;
     max-width: 50%;
