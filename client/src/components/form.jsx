@@ -10,6 +10,9 @@ import flowerBottomRight from '../images/flowers_bottom_right.png';
 import '../css/rsvp.css';
 import '../css/footer.css';
 
+import unchecked from '../images/empty_checkbox.png';
+import checked from '../images/checked_checkbox.png';
+
 // const apiUrl = 'localhost:3000/rsvp';
 
 function Form() {
@@ -109,35 +112,89 @@ function Form() {
 					<span className="popuptext" id="myPopup">
 						<div className="confirm-info">
 							<form>
+								<br />
 								<h1>RSVP</h1>
 								<br />
 								<p>KINDLY RESPOND BY MAY 15ST</p>
 								<br />
-								<p>
-									<b>Name:</b> {name}
+								<p className="names">
+									<b>NAME/S</b>{' '}
+									<p>
+										{name} {guestName ? '& ' + guestName : ''}
+									</p>
 								</p>
-								<p>
-									<b>E-mail:</b> {email}
+								<p className="mail-letter">
+									<b>MAIL</b>
+									<p>{email}</p>
+									<br />
 								</p>
-								<p>
-									<b>Dietary:</b> {dietary}
-								</p>
-								<p>
-									<b>Are you attending?:</b> {attending ? 'Yes!' : 'No :('}
-								</p>
-								<p>
-									<b>Do you have a guest?:</b> {plusOne ? 'Yes!' : 'No'}
-								</p>
-								<p>{plusOne ? `Guest Name: ${guestName}` : ''}</p>
-								<p>
-									{plusOneDietary ? `Guest's Dietary: ${plusOneDietary}` : ''}
-								</p>
+								<div className="attending-checkboxes">
+									{attending ? (
+										<>
+											<div className="attending-checked">
+												<b>Attending!</b>
+												<img
+													className="checkbox"
+													src={checked}
+													alt="filled checkbox"
+												/>
+											</div>
+											<div className="not-attending-box">
+												<b>Toasting from afar</b>
+												<img
+													className="checkbox"
+													src={unchecked}
+													alt="filled checkbox"
+												/>
+											</div>
+										</>
+									) : (
+										<>
+											<div className="attending-checked">
+												<b>Attending!</b>
+												<img
+													className="checkbox"
+													src={unchecked}
+													alt="filled checkbox"
+												/>
+											</div>
+											<div className="not-attending-box">
+												<b>Toasting from afar</b>
+												<img
+													className="checkbox"
+													src={checked}
+													alt="filled checkbox"
+												/>
+											</div>
+										</>
+									)}
+								</div>
+								<div className="dietary-req">
+									<br />
+									<br />
+									{attending ? (
+										<p>
+											<b>ANY DIETARY REQUIREMENTS?</b>
+											<p>
+												{attending && !plusOne
+													? `Your choice is ${dietary}.`
+													: ``}
+												{attending && plusOne
+													? `Your choice is ${dietary}, and your guests choice is ${plusOneDietary}.`
+													: ``}
+											</p>
+										</p>
+									) : (
+										''
+									)}
+								</div>
+
 								<div className="buttons">
 									<button className="submit-button" onClick={handleSubmit}>
-										Submit
+										Submit!
 									</button>
 									<button className="regret-button" onClick={closePopup}>
-										Oops! Wrong Info
+										Oops! Wrong Info.
 									</button>
 								</div>
 							</form>
@@ -152,6 +209,7 @@ function Form() {
 						<hr />
 					</div>
 					<form method="POST" className="form-info" onSubmit={confirmation}>
+						<h4>🖊️ Name & E-mail</h4>
 						<input
 							onChange={(e) => {
 								setName(e.target.value);
@@ -167,18 +225,18 @@ function Form() {
 							placeholder="Enter your email please"
 						/>
 						<br />
-						<h4>Dietary:</h4>
+						<h4>🍝 Diet Choice </h4>
 						<select
 							onChange={(e) => {
 								setDiatary(e.target.value);
 							}}
 							value={dietary}
 						>
-							<option value="Vegetarian">Vegetarian</option>
-							<option value="Non-vegetarian">Non-Vegetarian</option>
+							<option value="Vegetarian">🥗 Vegetarian</option>
+							<option value="Non-vegetarian">🥩 Non-Vegetarian</option>
 						</select>
 						<br />
-						<h4>Attending?:</h4>
+						<h4>🤞 Are you attending?</h4>
 						<input
 							type="checkbox"
 							onChange={(e) => {
@@ -189,7 +247,7 @@ function Form() {
 						<br />
 						{attending && (
 							<>
-								Plus 1?:
+								<h4>👥 Do you have a plus one guest?</h4>
 								<input
 									type="checkbox"
 									onChange={handlePlusOneChange}
@@ -198,7 +256,7 @@ function Form() {
 								{plusOne && (
 									<>
 										<br />
-										Guest Name:{' '}
+										<h4>🖊️ Guest Name</h4>{' '}
 										<input
 											onChange={(e) => {
 												setGuestName(e.target.value);
@@ -207,15 +265,15 @@ function Form() {
 											placeholder="Enter guest name please"
 										/>
 										<br />
-										Guest Dietary:{' '}
+										<h4>🍝 Guest Diet Choice</h4>{' '}
 										<select
 											onChange={(e) => {
 												setPlusOneDietary(e.target.value);
 											}}
 											value={plusOneDietary}
 										>
-											<option value="Vegetarian">Vegetarian</option>
-											<option value="Non-vegetarian">Non-Vegetarian</option>
+											<option value="Vegetarian">🥗 Vegetarian</option>
+											<option value="Non-vegetarian">🥩 Non-Vegetarian</option>
 										</select>
 									</>
 								)}

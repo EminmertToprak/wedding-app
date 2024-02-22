@@ -187,7 +187,6 @@ transition: .5s;
 .regret-button:hover {
     background-color: rgb(204, 67, 67);
     border: 1px solid gray;
-    transition: .5s;
     }
 
 
@@ -224,6 +223,7 @@ aside {
     box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, 1);
     background-image: url('../images/white-texture.jpg');
     background-size: cover;
+    border: 1px dashed #333;
 
   }
 
@@ -243,13 +243,28 @@ aside {
   visibility: visible;
 }
 
-/* Add animation (fade in the popup)
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.names {
+    border-bottom: 1px dashed #000;
+    text-align: center;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-} */
+.attending-checkboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.attending-checked,.not-attending-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    font-style: italic;
+}
+
+.checkbox {
+    width: 30px;
+    height: auto;
+}
