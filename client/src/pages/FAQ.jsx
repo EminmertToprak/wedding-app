@@ -36,7 +36,7 @@ function FAQ(props) {
 				<div className="questions">
 					<ul>
 						<li>
-							<h3>What is the dress code of the event?</h3>
+							<h3>👗 What is the dress code of the event?</h3>
 							<p>
 								Typically, women wear cocktail gowns or night dresses, and men
 								wear suits. Since it is a relaxed wedding near the beach, you
@@ -45,27 +45,39 @@ function FAQ(props) {
 							</p>
 						</li>
 						<li>
-							<h3>What is the typical Turkish wedding gift?</h3>
+							<h3>🎁 What is the typical Turkish wedding gift?</h3>
 							<p>
 								Having you with us is our most precious gift! &#128522; If you
-								would like to give us a gift, you can give us money during the
-								wedding while we go around the tables and welcome you, or you
-								can buy gold coins from a "kuyumcu" (jeweler) in the city if you
-								want to be a real Turkish guest.
+								insist on give us a gift, traditionally in Turkish weddings,
+								guests are giving money or Turkish gold coins while we go around
+								the tables and welcome you. You can buy gold coins from a
+								"kuyumcu" (jeweler) in the city if you want to real Turkish
+								guest experience.
 							</p>
 						</li>
 						<li>
-							<h3>Are there any accommodation nearby?</h3>
+							<h3>🏨 Are there any accommodation nearby?</h3>
 							<p>
-								The possible accommodation options are listed in map section.
+								The suggested accommodation options are listed in map section.
+								Ayvalık & Sarımsaklı is very popular holiday places so you won't
+								have any issues finding a place that suits you without any
+								doubt.
 							</p>
 						</li>
 						<li>
-							<h3>Are there any transportation options nearby?</h3>
+							<h3>🚕 Are there any transportation options nearby?</h3>
 							<p>
 								For those who need a taxi on the day of the wedding, the wedding
 								officers can do that for you. Alternatively, if you are coming
 								directly from the airport, you can also arrange that with Ece.
+							</p>
+						</li>
+						<li>
+							<h3>🚗 Parking</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+								odio alias. Distinctio totam ex nesciunt hic nostrum, blanditiis
+								minus accusamus itaque pariatur laboriosam ducimus in?
 							</p>
 						</li>
 					</ul>

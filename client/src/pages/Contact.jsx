@@ -41,20 +41,24 @@ function Contact(props) {
 					<div className="ece-mert">
 						<div className="ece-info">
 							<h4>Ece</h4>
-							<p>NL Phone:</p>
-							+31 (0)6 449 85 297
-							<p>TR Phone & Whatsapp:</p>
+							<p className="phone-title">📱🇳🇱 Phone:</p>
+							<p>+31 (0)6 449 85 297</p>
+							<p className="phone-title">📱🇹🇷 Phone & Whatsapp:</p>
 							<p>+90 535 938 12 96</p>
-							<p>Email: ececearici@gmail.com</p>
+							<p>
+								<b>Email:</b> ececearici@gmail.com
+							</p>
 						</div>
 						<br />
 						<div className="mert-info">
 							<h4>Mert</h4>
-							<p>TR Phone: </p>
+							<p className="phone-title">📱🇹🇷 Phone: </p>
 							<p>+90 535 942 49 22</p>
-							<p>NL Phone & Whatsapp: </p>
+							<p className="phone-title">📱🇳🇱 Phone & Whatsapp: </p>
 							<p>+31 (0)6 333 75 504</p>
-							<p>Email: mert.tprk@gmail.com</p>
+							<p>
+								<b>Email:</b> mert.tprk@gmail.com
+							</p>
 						</div>
 					</div>
 				</div>
@@ -63,30 +67,30 @@ function Contact(props) {
 					<h3>Arıcı Family</h3>
 					<h4>Nabi Arıcı</h4>
 					<sup>Father of Ece</sup>
-					<p>Phone: +90 532 741 55 50</p>
+					<p>📱Phone: +90 532 741 55 50</p>
 					<br />
 					<h4>Kadriye Arıcı</h4>
 					<sup>Mother of Ece</sup>
-					<p>Phone: +90 536 540 38 43</p>
+					<p>📱Phone: +90 536 540 38 43</p>
 					<br />
 					<h4>Emre Arıcı</h4>
 					<sup>Brother of Ece</sup>
-					<p>Phone: +90 532 785 28 38</p>
+					<p>📱Phone: +90 532 785 28 38</p>
 				</div>
 				<div className="toprak-info">
 					<img className="image" src={toprakportrait} alt="Ece & Mert" />
 					<h3>Toprak Family</h3>
 					<h4>Tekin Toprak</h4>
 					<sup>Father of Mert</sup>
-					<p>Phone: +90 532 366 63 40</p>
+					<p>📱Phone: +90 532 366 63 40</p>
 					<br />
 					<h4>Ayla Toprak</h4>
 					<sup>Mother of Mert</sup>
-					<p>Phone: +90 532 733 75 36</p>
+					<p>📱Phone: +90 532 733 75 36</p>
 					<br />
 					<h4>Melis Toprak</h4>
 					<sup>Sister of Mert</sup>
-					<p>Phone: +90 545 564 46 44</p>
+					<p>📱Phone: +90 545 564 46 44</p>
 				</div>
 			</div>
 			<br />

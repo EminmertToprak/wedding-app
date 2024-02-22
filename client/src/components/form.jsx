@@ -28,9 +28,6 @@ function Form() {
 	}
 
 	const handleSubmit = async (e) => {
-		// console.log(
-		// 	`Name: ${name}, email: ${email}, dietary: ${dietary}, attending?: ${attending}, Plus 1?: ${plusOne}, Plus 1 Name: ${guestName}, plus 1 dietary?: ${plusOneDietary}`
-		// );
 		e.preventDefault();
 
 		const requestBody = {
@@ -65,7 +62,7 @@ function Form() {
 		try {
 			navigate(`/`);
 		} catch (error) {
-			console.error('zort regret');
+			console.error('Can not navigate back to home: ' + error);
 		}
 	};
 
@@ -112,14 +109,28 @@ function Form() {
 					<span className="popuptext" id="myPopup">
 						<div className="confirm-info">
 							<form>
-								<p>Name: {name}</p>
-								<p>E-mail: {email}</p>
-								<p>Dietary: {dietary}</p>
-								<p>Are you attending?: {attending ? 'Yes!' : 'No :('}</p>
-								<p>Do you have a guest?: {plusOne ? 'Yes!' : 'No'}</p>
-								<p>{plusOne ? `Guest Name?: ${guestName}` : ''}</p>
+								<h1>RSVP</h1>
+								<br />
+								<p>KINDLY RESPOND BY MAY 15ST</p>
+								<br />
 								<p>
-									{plusOneDietary ? `Guest's Dietary?: ${plusOneDietary}` : ''}
+									<b>Name:</b> {name}
+								</p>
+								<p>
+									<b>E-mail:</b> {email}
+								</p>
+								<p>
+									<b>Dietary:</b> {dietary}
+								</p>
+								<p>
+									<b>Are you attending?:</b> {attending ? 'Yes!' : 'No :('}
+								</p>
+								<p>
+									<b>Do you have a guest?:</b> {plusOne ? 'Yes!' : 'No'}
+								</p>
+								<p>{plusOne ? `Guest Name: ${guestName}` : ''}</p>
+								<p>
+									{plusOneDietary ? `Guest's Dietary: ${plusOneDietary}` : ''}
 								</p>
 								<div className="buttons">
 									<button className="submit-button" onClick={handleSubmit}>
@@ -212,7 +223,7 @@ function Form() {
 						)}
 
 						<div className="buttons">
-							<button className="submit-button" onClick={confirmation}>
+							<button className="check-button" onClick={confirmation}>
 								Check
 							</button>
 							<button className="regret-button" onClick={regretButton}>

@@ -1,10 +1,12 @@
 .faq {
     z-index: 9999;
     overflow: hidden;
-    margin: 250px 50px 100px 50px
+    margin: 150px 25% 0px 25%;
 }
+
 .faq ul li {
     list-style-type: none;
+    margin-top: 25px;
 }
 
 .top-left-flower-faq {
@@ -14,8 +16,8 @@
     left: 0;
     top: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -26,8 +28,8 @@
     right: 0px;
     top: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -38,8 +40,8 @@
     left: 0px;
     bottom: -100px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -50,8 +52,8 @@
     right: 0px;
     bottom: -100px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 

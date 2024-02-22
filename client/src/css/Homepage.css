@@ -43,8 +43,8 @@ img {
     left: 0;
     top: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     z-index: 90
 }
 
@@ -55,8 +55,8 @@ img {
     right: 0px;
     top: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
 }
 
 .bottom-left-flower {
@@ -66,8 +66,8 @@ img {
     left: 0px;
     bottom: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
 }
 
 .bottom-right-flower {
@@ -77,8 +77,8 @@ img {
     right: 0px;
     bottom: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
 }
 
 a:active, a:hover {
@@ -116,7 +116,7 @@ div {
 }
 
 .ourstory {
-    background-color: wheat;
+    background-color: #fefefe;
 }
 
 .ourstory {

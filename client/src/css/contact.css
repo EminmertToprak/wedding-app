@@ -5,8 +5,8 @@
     left: 0;
     top: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -17,8 +17,8 @@
     right: 0px;
     top: 0px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -29,8 +29,8 @@
     left: 0px;
     bottom: -250px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -41,8 +41,8 @@
     right: 0px;
     bottom: -250px;
     display: block;
-    max-height: 40%;
-    max-width: 50%;
+    max-height: 30%;
+    max-width: 40%;
     opacity: 30%;
 }
 
@@ -55,6 +55,10 @@
 
 .ece-mert {
     width: 250px;
+}
+
+.phone-title {
+    font-weight: 600;
 }
 
 .image {

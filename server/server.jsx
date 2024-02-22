@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const port = 3000;
+const port = 3001;
 const app = express();
 
 const uri =
@@ -27,10 +27,6 @@ mongoose
 		});
 	})
 	.catch((err) => console.error('Error connecting to MongoDB', err));
-
-app.listen(port, () => {
-	console.log(`Example app listening on port ${port}`);
-});
 
 app.post('/rsvp', (req, res) => {
 	const name = req.body.name;
