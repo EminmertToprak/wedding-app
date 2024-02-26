@@ -5,15 +5,40 @@
     justify-content: center;
 }
 
-.map {
+.map-and-location {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     z-index: 9998;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10%;
+}
+
+.map-and-location a {
+    width: 500px;
+    height: auto;
+    align-self: center;
+   
+}
+
+.map-and-location img {
+    width: 500px;
+    height: 500px;
 }
 
 .map-image {
     width: 500px;
     height: 500px;
+    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+}
+
+.wedding-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beach-club img {
     box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
 }
 
@@ -30,6 +55,10 @@
 .hotel {
     display: flex;
     flex-direction: column;
+}
+
+.hotel h2 {
+    font-size: 30px;
 }
 
 .hotel-image {
@@ -69,7 +98,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -3365px;
+    bottom: -3430px;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -82,7 +111,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -3365px;
+    bottom: -3430px;
     display: block;
     max-height: 30%;
     max-width: 40%;

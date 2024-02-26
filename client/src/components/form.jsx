@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
@@ -12,8 +12,6 @@ import '../css/footer.css';
 
 import unchecked from '../images/empty_checkbox.png';
 import checked from '../images/checked_checkbox.png';
-
-// const apiUrl = 'localhost:3000/rsvp';
 
 function Form() {
 	const [name, setName] = useState('');
@@ -42,20 +40,16 @@ function Form() {
 			guestName,
 			plusOneDietary,
 		};
+
 		console.log(requestBody);
 
-		// 	axios
-		// 		.post(`${apiUrl}/rsvp`, requestBody)
-		// 		.then((response) => {
-		// 			navigate('/rsvp');
-		// 		})
-		// 		.catch((error) => {
-		// 			alert('zort');
-		// 			console.error('Error in axios: ', error);
-		// 		});
-		// } catch (error) {
-		// 	console.error('zort');
-		// }
+		try {
+			// Sending POST request to backend
+			await axios.post('http://localhost:5000/rsvp/submit', requestBody);
+			console.log('RSVP submitted succesfully!');
+		} catch (error) {
+			console.error('Error submitting RSVP to DB:', error);
+		}
 	};
 
 	let navigate = useNavigate();
@@ -117,17 +111,17 @@ function Form() {
 								<br />
 								<p>KINDLY RESPOND BY MAY 15ST</p>
 								<br />
-								<p className="names">
+								<div className="names">
 									<b>NAME/S</b>{' '}
 									<p>
 										{name} {guestName ? '& ' + guestName : ''}
 									</p>
-								</p>
-								<p className="mail-letter">
+								</div>
+								<div className="mail-letter">
 									<b>MAIL</b>
 									<p>{email}</p>
 									<br />
-								</p>
+								</div>
 								<div className="attending-checkboxes">
 									{attending ? (
 										<>
@@ -173,7 +167,7 @@ function Form() {
 									<br />
 									<br />
 									{attending ? (
-										<p>
+										<div>
 											<b>ANY DIETARY REQUIREMENTS?</b>
 											<p>
 												{attending && !plusOne
@@ -183,7 +177,7 @@ function Form() {
 													? `Your choice is ${dietary}, and your guests choice is ${plusOneDietary}.`
 													: ``}
 											</p>
-										</p>
+										</div>
 									) : (
 										''
 									)}
@@ -233,7 +227,7 @@ function Form() {
 							value={dietary}
 						>
 							<option value="Vegetarian">🥗 Vegetarian</option>
-							<option value="Non-vegetarian">🥩 Non-Vegetarian</option>
+							<option value="Non-Vegetarian">🥩 Non-Vegetarian</option>
 						</select>
 						<br />
 						<h4>🤞 Are you attending?</h4>
@@ -273,7 +267,7 @@ function Form() {
 											value={plusOneDietary}
 										>
 											<option value="Vegetarian">🥗 Vegetarian</option>
-											<option value="Non-vegetarian">🥩 Non-Vegetarian</option>
+											<option value="Non-Vegetarian">🥩 Non-Vegetarian</option>
 										</select>
 									</>
 								)}

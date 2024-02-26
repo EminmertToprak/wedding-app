@@ -2,7 +2,6 @@ import React from 'react';
 import '../css/location.css';
 import '../css/footer.css';
 import Footer from '../components/footer';
-import mapimage from '../images/map.png';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
@@ -16,6 +15,7 @@ import sarimsakli from '../images/sarimsakli.jpg';
 import cunda from '../images/cunda.jpg';
 import ida from '../images/ida.jpg';
 import zeytinyag from '../images/zeytinyag.png';
+import weddingPlace from '../images/wedding-place.jpg';
 
 const Location = () => {
 	return (
@@ -41,26 +41,26 @@ const Location = () => {
 				alt="flower_bottom_right"
 			/>
 			<div className="location">
-				<div className="map">
-					<br />
-					<h2>Wedding Location</h2>
-					<br />
-					<br />
-					<a
-						href="https://www.google.com/maps/place/Marenostrum+Beach+Club+Sar%C4%B1msakl%C4%B1/@39.2676915,26.6802943,17z/data=!4m6!3m5!1s0x14ba71aebd30067b:0xa412082d99a6625f!8m2!3d39.2676874!4d26.6806805!16s%2Fg%2F11nx208gkb?entry=ttu"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							className="map-image"
-							src={mapimage}
-							alt="Marenostrum Beach Club Sarımsaklı"
-						/>
-					</a>
-					<sup>Click image for Google Maps Location</sup>
-					<h3>Marenostrum Beach Club</h3>
-					<p>Küçükköy, Sarımsaklı Blv, 10410 Ayvalık/Balıkesir, Türkiye</p>
-					<p>Phone: +90 533 021 88 90</p>
+				<h2>Wedding Location</h2>
+				<br />
+				<div className="map-and-location">
+					<div className="wedding-location">
+						<a
+							href="https://www.google.com/maps/place/Marenostrum+Beach+Club+Sar%C4%B1msakl%C4%B1/@39.2676915,26.6802943,17z/data=!4m6!3m5!1s0x14ba71aebd30067b:0xa412082d99a6625f!8m2!3d39.2676874!4d26.6806805!16s%2Fg%2F11nx208gkb?entry=ttu"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img
+								className="map-image"
+								src={weddingPlace}
+								alt="Marenostrum Beach Club Sarımsaklı"
+							/>
+						</a>
+						<sup>Click image for Google Maps Location</sup>
+						<h3>Marenostrum Beach Club</h3>
+						<p>Küçükköy, Sarımsaklı Blv, 10410 Ayvalık/Balıkesir, Türkiye</p>
+						<p>Phone: +90 533 021 88 90</p>
+					</div>
 				</div>
 				<br />
 				<div className="accommodation">
@@ -70,7 +70,7 @@ const Location = () => {
 					<br />
 					<div className="hotels">
 						<div className="hotel">
-							<p>Musho Hotel</p>
+							<h2>Musho Hotel</h2>
 							<a
 								href="https://grand-musho-hotel.rezervasyonal.com/"
 								target="_blank"
@@ -80,7 +80,7 @@ const Location = () => {
 							</a>
 						</div>
 						<div className="hotel">
-							<p>Ayvalık Sea Resort</p>
+							<h2>Ayvalik Sea Resort</h2>
 							<a
 								href="https://www.besthotel.pt/tr/ayvalik-sea-resort/"
 								target="_blank"
@@ -90,7 +90,7 @@ const Location = () => {
 							</a>
 						</div>
 						<div className="hotel">
-							<p>D Resort Ayvalık</p>
+							<h2>D Resort Ayvalik</h2>
 							<a
 								href="https://www.dresortayvalik.com/en"
 								target="_blank"
@@ -100,7 +100,7 @@ const Location = () => {
 							</a>
 						</div>
 						<div className="hotel">
-							<p>Temizel Hotel</p>
+							<h2>Temizel Hotel</h2>
 							<a
 								href="https://www.otelz.com/en/hotel/grand-hotel-temizel/2701?search=eyJwIjoiMjcwMSIsInQiOiIwIiwiZyI6IjYiLCJzIjoiMjQtMDItMjgiLCJlIjoiMjQtMDItMjkiLCJsIjoiMjcwMSIsImQiOiIwIiwicSI6IjEiLCJ6IjoiMCIsInIiOlt7ImEiOjIsImciOltdfV0sImMiOiJUUlkifQ==&utm_source=metasearch&utm_medium=google&utm_campaign=search&to=1847"
 								target="_blank"
