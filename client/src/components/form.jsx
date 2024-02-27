@@ -22,6 +22,8 @@ function Form() {
 	const [plusOne, setPlusOne] = useState(false);
 	const [plusOneDietary, setPlusOneDietary] = useState('');
 
+	console.log(process.env.semih);
+
 	function confirmation(e) {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
@@ -46,7 +48,7 @@ function Form() {
 		console.log(requestBody);
 
 		// Deployment Based on Environment
-		const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+		const baseURL = process.env.MONGODB_URI || 'http://localhost:5000';
 
 		try {
 			// Sending POST request to backend

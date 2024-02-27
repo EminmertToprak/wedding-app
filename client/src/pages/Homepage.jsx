@@ -3,6 +3,7 @@ import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 import arrow from '../images/arrow.png';
+import ourStoryBreak from '../images/OurStoryBreak.png';
 import dateGif from '../images/2024_white.gif';
 import '../css/Homepage.css';
 import '../css/footer.css';
@@ -71,7 +72,7 @@ function Homepage(props) {
 					</div>
 					<img
 						className="ourstorybreak"
-						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
+						src={ourStoryBreak}
 						alt="Our Story Break"
 					/>
 					<div className="body1">
@@ -87,7 +88,7 @@ function Homepage(props) {
 					</div>
 					<img
 						className="ourstorybreak"
-						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/57a62742f66b1be80d2ab1b7_OurStoryBreak.png"
+						src={ourStoryBreak}
 						alt="ourstorybreak"
 					/>
 					<h2 className="save-the-date">Save The Date!</h2>
