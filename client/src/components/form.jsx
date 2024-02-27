@@ -46,18 +46,11 @@ function Form() {
 		console.log(requestBody);
 
 		// Deployment Based on Environment
-		let baseURL = '';
-		if (process.env.NODE_ENV === 'development') {
-			baseURL = 'http://localhost:5000';
-		} else {
-			baseURL = 'PRODUCTION URL PLACEHOLDER';
-		}
-
-		axios.defaults.baseURL = baseURL;
+		const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 		try {
 			// Sending POST request to backend
-			await axios.post('/rsvp/submit', requestBody);
+			await axios.post(`${baseURL}/rsvp/submit`, requestBody);
 			console.log('RSVP submitted succesfully!');
 			alert('See you there!');
 			navigate('/');
