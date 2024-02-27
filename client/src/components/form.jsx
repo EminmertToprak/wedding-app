@@ -21,9 +21,6 @@ function Form() {
 	const [attending, setAttending] = useState(false);
 	const [plusOne, setPlusOne] = useState(false);
 	const [plusOneDietary, setPlusOneDietary] = useState('');
-
-	console.log(process.env.semih);
-
 	function confirmation(e) {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
@@ -48,7 +45,7 @@ function Form() {
 		console.log(requestBody);
 
 		// Deployment Based on Environment
-		const baseURL = process.env.SERVER_URI;
+		const baseURL = process.env.REACT_APP_SERVER_URI;
 
 		try {
 			// Sending POST request to backend
