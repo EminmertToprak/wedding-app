@@ -48,7 +48,7 @@ function Form() {
 		console.log(requestBody);
 
 		// Deployment Based on Environment
-		const baseURL = process.env.MONGODB_URI || 'http://localhost:5000';
+		const baseURL = process.env.SERVER_URI;
 
 		try {
 			// Sending POST request to backend
