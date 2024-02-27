@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDB = require('./db');
-const cors = require('cors');
+// const cors = require('cors');
 
 // Initialize Express app
 const app = express();
@@ -14,7 +14,14 @@ const corsOptions = {
 	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-app.use(cors(corsOptions));
+app.use(function (req, res, next) {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', '*');
+	res.setHeader('Access-Control-Allow-Headers', '*');
+	next();
+});
+
+// app.use(cors(corsOptions));
 app.use(express.json());
 
 // // Custom middleware to log requests (Server Logging)
