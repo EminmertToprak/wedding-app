@@ -2,6 +2,7 @@ import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
+import arrow from '../images/arrow.png';
 import dateGif from '../images/2024_white.gif';
 import '../css/Homepage.css';
 import '../css/footer.css';
@@ -32,10 +33,7 @@ function Homepage(props) {
 					alt="flower_bottom_right"
 				/>
 				<a className="downarrowlinkblock w-inline-block" href="#OurStory">
-					<img
-						src="http://uploads.webflow.com/56c79e8b5e6fb84471a77069/5790ef97ed3b49f647da0198_Arrow.png"
-						alt="ourstory"
-					/>
+					<img src={arrow} alt="ourstory" />
 				</a>
 			</div>
 			<div className="ourstory" id="OurStory">
