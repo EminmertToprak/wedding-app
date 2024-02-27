@@ -44,7 +44,7 @@ const rsvpSchema = new Schema(
 		plusOneDietary: {
 			type: String,
 			default: 'Non-Vegetarian',
-			enum: ['Non-Vegetarian', 'Vegetarian'],
+			enum: ['Non-Vegetarian', 'Vegetarian', ''],
 		},
 	},
 	{

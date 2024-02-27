@@ -28,6 +28,8 @@ function Form() {
 		popup.classList.toggle('show');
 	}
 
+	let navigate = useNavigate();
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
@@ -43,16 +45,27 @@ function Form() {
 
 		console.log(requestBody);
 
+		// Deployment Based on Environment
+		let baseURL = '';
+		if (process.env.NODE_ENV === 'development') {
+			baseURL = 'http://localhost:5000';
+		} else {
+			baseURL = 'PRODUCTION URL PLACEHOLDER';
+		}
+
+		axios.defaults.baseURL = baseURL;
+
 		try {
 			// Sending POST request to backend
-			await axios.post('http://localhost:5000/rsvp/submit', requestBody);
+			await axios.post('/rsvp/submit', requestBody);
 			console.log('RSVP submitted succesfully!');
+			alert('See you there!');
+			navigate('/');
 		} catch (error) {
+			alert('Something went wrong! Please commmunicate with Mert.');
 			console.error('Error submitting RSVP to DB:', error);
 		}
 	};
-
-	let navigate = useNavigate();
 
 	const regretButton = async (e) => {
 		e.preventDefault();
