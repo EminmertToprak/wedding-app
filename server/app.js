@@ -10,7 +10,7 @@ connectDB();
 
 // Middleware
 const corsOptions = {
-	origin: ['*'],
+	origin: 'https://silly-malabi-f9c192.netlify.app',
 	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
