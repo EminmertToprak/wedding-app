@@ -10,15 +10,18 @@ connectDB();
 
 // Middleware
 const corsOptions = {
-	origin: [
-		'https://ecemertwedding.netlify.app',
-		'https://silly-malabi-f9c192.netlify.app',
-	],
+	origin: ['*'],
 	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
 app.use(cors(corsOptions));
 app.use(express.json());
+
+// Custom middleware to log requests (Server Logging)
+app.use((req, res, next) => {
+	console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+	next();
+});
 
 const rsvpRoutes = require('./routes/rsvpRoutes');
 
