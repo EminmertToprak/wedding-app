@@ -9,8 +9,11 @@ const app = express();
 connectDB();
 
 // Middleware
-var corsOptions = {
-	origin: 'https://ecemertwedding.netlify.app',
+const corsOptions = {
+	origin: [
+		'https://ecemertwedding.netlify.app',
+		'https://silly-malabi-f9c192.netlify.app',
+	],
 	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
