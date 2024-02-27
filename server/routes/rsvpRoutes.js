@@ -6,7 +6,7 @@ const cors = require('cors');
 const RSVP = require('../models/rsvp.model');
 
 // Route to handle RSVP submissions
-router.post('/submit', cors(), async (req, res) => {
+router.post('/submit', async (req, res) => {
 	try {
 		const rsvpData = req.body;
 		const newRSVP = new RSVP(rsvpData);
