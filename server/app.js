@@ -1,41 +1,48 @@
 const express = require('express');
 const connectDB = require('./db');
 
-// Initialize Express app
 const app = express();
-
-// Connect to MongoDB
-connectDB();
-
-// Middleware
-const cors = require('cors');
-
-const corsOptions = {
-	origin: true,
-	credentials: true,
-};
-
-// app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // preflight OPTIONS; put before other routes
 
 app.use(express.json());
 
-// Custom middleware to log requests (Server Logging)
 app.use((req, res, next) => {
 	console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
 	next();
 });
 
-const registerRsvp = require('./routes/rsvpRoutes_2');
-
-// Use RSVP routes
-// app.use('/rsvp', rsvpRoutes);
-registerRsvp(app);
-
-app.get('/test', async (req, res) => {
-	res.status(200).json({ message: 'test' });
+app.get('/', (req, res) => {
+	res.send('Hello from Express.js running on Netlify!');
 });
 
-// Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const registerRsvp = require('./routes/rsvpRoutes_2');
+
+registerRsvp(app);
+
+module.exports.handler = async (event, context) => {
+	connectDB();
+	const { path, httpMethod, queryStringParameters, body } = event;
+	const req = {
+		method: httpMethod,
+		body: JSON.parse(body),
+		query: queryStringParameters,
+		path,
+	};
+	const res = {
+		statusCode: 200,
+		_body: '',
+		send: (body) => {
+			res._body = body;
+		},
+	};
+
+	await app(req, res);
+
+	return {
+		statusCode: res.statusCode,
+		body: res._body,
+	};
+};
+
+// // Start the server
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
