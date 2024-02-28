@@ -13,7 +13,7 @@ function Navbar() {
 		<div className="navbar">
 			<div className="menu-items">
 				<Link className="menu-button" to="/" onClick={toggleMenu}>
-					<p>Home</p>
+					Home
 				</Link>
 				<Link className="menu-button" to="/rsvp" onClick={toggleMenu}>
 					RSVP

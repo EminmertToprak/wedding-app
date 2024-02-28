@@ -1,6 +1,5 @@
 const express = require('express');
 const connectDB = require('./db');
-// const cors = require('cors');
 
 // Initialize Express app
 const app = express();
@@ -9,19 +8,15 @@ const app = express();
 connectDB();
 
 // Middleware
-// const corsOptions = {
-// 	origin: '*',
-// 	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
+const cors = require('cors');
 
-app.use(function (req, res, next) {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Methods', '*');
-	res.setHeader('Access-Control-Allow-Headers', '*');
-	next();
-});
+const corsOptions = {
+	origin: 'https://ecemertwedding.netlify.app', // Replace with your frontend URL
+	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // // Custom middleware to log requests (Server Logging)
