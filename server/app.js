@@ -10,12 +10,13 @@ connectDB();
 // Middleware
 const cors = require('cors');
 
-// const corsOptions = {
-// 	origin: 'https://ecemertwedding.netlify.app', // Replace with your frontend URL
-// 	optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
+const corsOptions = {
+	origin: true,
+	credentials: true,
+};
 
-app.use(cors());
+// app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // preflight OPTIONS; put before other routes
 
 app.use(express.json());
 
