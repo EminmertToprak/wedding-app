@@ -1,5 +1,5 @@
 const express = require('express');
-const connectDB = require('./db');
+const connectDB = require('../db');
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 	res.send('Hello from Express.js running on Netlify!');
 });
 
-const registerRsvp = require('./routes/rsvpRoutes_2');
+const registerRsvp = require('../routes/rsvpRoutes_2');
 
 registerRsvp(app);
 
