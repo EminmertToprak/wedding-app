@@ -15,7 +15,7 @@ export default async (req, context) => {
 		const bodyBuffer = Buffer.concat(chunks);
 		const requestBody = JSON.parse(bodyBuffer.toString());
 		const newRSVP = new RSVP(requestBody);
-		db.connectDB();
+		db();
 		await newRSVP.save();
 	} catch (error) {
 		console.error('Error submitting RSVP:', error);
