@@ -49,7 +49,7 @@ function Form() {
 
 		try {
 			// Sending POST request to backend
-			await axios.post(`${baseURL}/rsvp/submit`, requestBody);
+			await axios.post(`${baseURL}/rsvp`, requestBody);
 			console.log('RSVP submitted succesfully!');
 			alert('See you there!');
 			navigate('/');
