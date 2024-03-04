@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+import { connect } from 'mongoose';
 
 const connectDB = async () => {
 	try {
-		await mongoose.connect(Netlify.env.get('MONGODB_URI'), {});
+		await connect(Netlify.env.get('MONGODB_URI'), {});
 		console.log('MongoDB connected');
 	} catch (error) {
 		console.error('Error connecting to MongoDB:', error);
@@ -10,4 +10,4 @@ const connectDB = async () => {
 	}
 };
 
-module.exports = { connectDB };
+export default { connectDB };
