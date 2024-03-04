@@ -1,16 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const cors = require('cors');
-
-// RSVP Model
 const RSVP = require('../models/rsvp.model');
-
-router.options('/submit', async (req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Methods', '*');
-	res.setHeader('Access-Control-Allow-Headers', '*');
-	res.end();
-});
 
 // Route to handle RSVP submissions
 router.post('/submit', async (req, res) => {

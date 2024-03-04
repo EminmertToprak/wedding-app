@@ -1,30 +1,42 @@
 const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
 const app = express();
 
+// Middleware
+app.use(express.json()); // Parse JSON request bodies
+
+// Connect to MongoDB
+const connectDB = async () => {
+	try {
+		await mongoose.connect(process.env.MONGODB_URI, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+			useCreateIndex: true,
+			useFindAndModify: false,
+		});
+		console.log('MongoDB connected');
+	} catch (error) {
+		console.error('Error connecting to MongoDB:', error);
+		process.exit(1);
+	}
+};
+connectDB();
+
+// Routes
+const rsvpRoutes = require('./routes/rsvpRoutes');
+app.use('/rsvp', rsvpRoutes);
+
+// Test route
 app.get('/hello', (req, res) => {
 	res.send('Hello from Express.js running on Netlify!');
 });
 
-module.exports.handler = async (event, context) => {
-	const { path, httpMethod, queryStringParameters, body } = event;
-	const req = {
-		method: httpMethod,
-		body: JSON.parse(body),
-		query: queryStringParameters,
-		path,
-	};
-	const res = {
-		statusCode: 200,
-		_body: '',
-		send: (body) => {
-			res._body = body;
-		},
-	};
+// Error handler
+app.use((err, req, res, next) => {
+	console.error(err.stack);
+	res.status(500).send('Internal Server Error');
+});
 
-	await app(req, res);
-
-	return {
-		statusCode: res.statusCode,
-		body: res._body,
-	};
-};
+module.exports = app;

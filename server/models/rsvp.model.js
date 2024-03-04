@@ -15,19 +15,8 @@ const rsvpSchema = new Schema(
 		dietary: {
 			type: String,
 			default: 'Non-Vegetarian',
-			enum: ['Non-Vegetarian', 'Vegetarian', 'Non-vegetarian', 'Vegetarian'],
-			validate: {
-				validator: function (value) {
-					return [
-						'Non-Vegetarian',
-						'Vegetarian',
-						'Non-vegetarian',
-						'Vegetarian',
-					].includes(value);
-				},
-				message: (props) =>
-					`${props.value} is not a valid dietary option. Please choose from 'Non-Vegetarian' or 'Vegetarian'.`,
-			},
+			enum: ['Non-Vegetarian', 'Vegetarian'],
+			required: true,
 		},
 		attending: {
 			type: Boolean,
