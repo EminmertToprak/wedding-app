@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "wedding-app/server",
+        "use": "@vercel/node"
+      }
+    ]
+  }
