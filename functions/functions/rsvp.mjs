@@ -22,9 +22,8 @@ export default async (req, context) => {
 		return new Response(`Error: ${error}`, {
 			status: 400,
 		});
-		console.log(bodyBuffer);
 	}
-	return new Response(`Your mongoDB URI is: ${Netlify.env.get('MONGODB_URI')}`);
+	return new Response(`SUCCESS!`);
 };
 
 export const config = {
