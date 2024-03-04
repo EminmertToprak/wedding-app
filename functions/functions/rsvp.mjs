@@ -1,4 +1,4 @@
-const db = require('../service/db').default;
+const db = require('../service/db.mjs').default;
 const RSVP = require('../models/rsvp.model');
 
 export default async (req, context) => {
