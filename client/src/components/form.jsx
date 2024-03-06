@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import Loader from './loader';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
@@ -21,6 +21,8 @@ function Form() {
 	const [attending, setAttending] = useState(false);
 	const [plusOne, setPlusOne] = useState(false);
 	const [plusOneDietary, setPlusOneDietary] = useState('');
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
 	function confirmation(e) {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
@@ -31,7 +33,7 @@ function Form() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
+		setIsSubmitting(true);
 		const requestBody = {
 			name,
 			email,
@@ -53,9 +55,11 @@ function Form() {
 			console.log('RSVP submitted succesfully!');
 			alert('See you there!');
 			navigate('/');
+			setIsSubmitting(false);
 		} catch (error) {
 			alert('Something went wrong! Please commmunicate with Mert.');
 			console.error('Error submitting RSVP to DB:', error);
+			setIsSubmitting(false);
 		}
 	};
 
@@ -200,6 +204,14 @@ function Form() {
 						</div>
 					</span>
 				</div>
+				{isSubmitting && (
+					<div className="modal-overlay">
+						<div className="modal-content">
+							<Loader />
+							<p>Please wait while we're working on it...</p>
+						</div>
+					</div>
+				)}
 				<div className="form-main">
 					<div className="info">
 						<h1>RSVP</h1>
