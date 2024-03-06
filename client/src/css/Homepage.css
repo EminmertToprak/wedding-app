@@ -121,7 +121,6 @@ div {
 
 .ourstory {
     padding-top: 65px;
-    padding-bottom: 65px;
     background-color: transparent;
 }
 
@@ -184,6 +183,7 @@ h2 {
     flex-direction: column;
     white-space: nowrap;
     gap: 15px;
+    margin-bottom: 50px;
 }
 
 .wedding-ceramony, .party {

@@ -104,7 +104,7 @@ function Contact(props) {
 				<p>Küçükköy, Sarımsaklı Blv, 10410 Ayvalık/Balıkesir, Türkiye</p>
 				<p>Phone: +90 533 021 88 90</p>
 			</div>
-			<div id="footer">
+			<div id="contact-footer">
 				<Footer />
 			</div>
 		</>

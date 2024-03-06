@@ -75,15 +75,20 @@ function FAQ(props) {
 						<li>
 							<h3>🚗 Parking</h3>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-								odio alias. Distinctio totam ex nesciunt hic nostrum, blanditiis
-								minus accusamus itaque pariatur laboriosam ducimus in?
+								Wedding place has very large car parking option so you shouldn't
+								worry about it at all! Also, in Turkey, most of the sideways are
+								free parking, except the city centre of Ayvalık. If you would
+								like to go to city centre of Ayvalık via car, there are multiple
+								car parks you can use. But beware of the very very narrow
+								streets!
 							</p>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<Footer />
+			<div className="faq-footer">
+				<Footer />
+			</div>
 		</>
 	);
 }

@@ -98,7 +98,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -3430px;
+    bottom: -3160px;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -111,7 +111,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -3430px;
+    bottom: -3160px;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -148,4 +148,8 @@
 hr {
     width: 100%;
     margin: 5% 1% 5% 1%;
+}
+
+#location-footer {
+    position: relative;
 }

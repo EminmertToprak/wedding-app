@@ -181,7 +181,7 @@ const Location = () => {
 					<hr />
 				</div>
 			</div>
-			<div id="footer">
+			<div id="location-footer">
 				<Footer />
 			</div>
 		</>

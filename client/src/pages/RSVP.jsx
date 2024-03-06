@@ -8,8 +8,8 @@ function RSVP() {
 		<>
 			<div className="div-form">
 				<Form />
+				<Footer />
 			</div>
-			<Footer />
 		</>
 	);
 }

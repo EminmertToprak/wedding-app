@@ -27,7 +27,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -250px;
+    bottom: -300px;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -39,7 +39,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -250px;
+    bottom: -300px;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -77,7 +77,7 @@ sup {
     font-style: italic;
 }
 
-#footer {
+#contact-footer {
     position: relative;
     top: 0%;
 }

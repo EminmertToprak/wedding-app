@@ -203,12 +203,9 @@ aside {
 .popup {
     visibility: hidden;
     position: absolute;
-    top: 20%;
-    left: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    top:0;
     z-index: 9999;
   }
 
@@ -216,7 +213,10 @@ aside {
     visibility: hidden;
     background-color: #bdd7d4;
     color: #333;
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 6px;
     padding: 8px 8px;
@@ -241,6 +241,7 @@ aside {
 
 .popup .show {
   visibility: visible;
+  display: block;
 }
 
 .names {
