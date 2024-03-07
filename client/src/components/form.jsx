@@ -44,8 +44,6 @@ function Form() {
 			plusOneDietary,
 		};
 
-		console.log(requestBody);
-
 		// Deployment Based on Environment
 		const baseURL = process.env.REACT_APP_SERVER_URI;
 
@@ -118,7 +116,7 @@ function Form() {
 								<br />
 								<h1>RSVP</h1>
 								<br />
-								<p>KINDLY RESPOND BY MAY 15ST</p>
+								<p>KINDLY RESPOND BY 1ST OF MAY</p>
 								<br />
 								<div className="names">
 									<b>NAME/S</b>{' '}
