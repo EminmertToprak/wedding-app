@@ -284,4 +284,10 @@ h2 {
     .top-right-flower {
     max-height: 15%;
 }
+
+.top-left-flower,
+    .top-right-flower {
+    opacity: 30%;
+
+}
 }
