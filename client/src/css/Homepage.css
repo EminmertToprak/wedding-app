@@ -277,4 +277,11 @@ h2 {
     .date img {
         margin-top: 0.5rem; /* Adjust the margin for the date image */
     }
+
+    .bottom-left-flower,
+    .bottom-right-flower,
+    .top-left-flower,
+    .top-right-flower {
+    max-height: 15%;
+}
 }

@@ -90,3 +90,66 @@ sup {
     position: relative;
     top: 0%;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .top-left-flower-contact,
+    .top-right-flower-contact,
+    .bottom-left-flower-contact,
+    .bottom-right-flower-contact {
+        max-height: 15%;
+        max-width: 40%;
+        opacity: 60%;
+    }
+
+    .bottom-left-flower-contact,
+    .bottom-right-flower-contact {
+        bottom: -238%
+    }
+    
+    .contacts {
+        margin-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .ece-mert {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    
+    .ece-info {
+        align-self: center;
+        text-align: center;
+    
+    }
+    
+    .phone-title {
+        font-weight: 600;
+    }
+    
+    .image {
+        position: relative;
+        width: 15.625rem;
+        height: 15.625rem;
+        box-shadow: 0.1rem 0.1rem 0.3rem 0.05rem rgb(0, 0, 0, .50);
+        border-radius: 50%;
+    }
+    
+    .wedding-place {
+        margin-bottom:2.5rem;
+    }
+    
+    sup {
+        font-style: italic;
+    }
+    
+    #contact-footer {
+        position: relative;
+        top: 0%;
+    }
+
+}

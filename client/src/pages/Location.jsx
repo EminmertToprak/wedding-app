@@ -114,7 +114,7 @@ const Location = () => {
 				<h2>What to do before / after Wedding?</h2>
 				<br />
 				<div className="suggestions">
-					<div className="suggestion">
+					<div className="suggestion-1">
 						<article className="article">
 							<h3>Ayvalık City Center</h3>
 							<p>
@@ -127,7 +127,7 @@ const Location = () => {
 						<img src={ayvalik} alt="" />
 					</div>
 					<hr />
-					<div className="suggestion">
+					<div className="suggestion-2">
 						<img src={sarimsakli} alt="" />
 						<article className="article">
 							<h3>Sarımsaklı Beach</h3>
@@ -140,7 +140,7 @@ const Location = () => {
 						</article>
 					</div>
 					<hr />
-					<div className="suggestion">
+					<div className="suggestion-3">
 						<article className="article">
 							<h3>Cunda Island (Alibey Island)</h3>
 							<p>
@@ -153,7 +153,7 @@ const Location = () => {
 						<img src={cunda} alt="" />
 					</div>
 					<hr />
-					<div className="suggestion">
+					<div className="suggestion-4">
 						<img src={ida} alt="" />
 						<article className="article">
 							<h3>Mount Ida National Park</h3>
@@ -166,7 +166,7 @@ const Location = () => {
 						</article>
 					</div>
 					<hr />
-					<div className="suggestion">
+					<div className="suggestion-5">
 						<article className="article">
 							<h3>Olive Oil Tasting</h3>
 							<p>
@@ -178,7 +178,6 @@ const Location = () => {
 						</article>
 						<img src={zeytinyag} alt="" />
 					</div>
-					<hr />
 				</div>
 			</div>
 			<div id="location-footer">

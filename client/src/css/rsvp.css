@@ -296,8 +296,13 @@ aside {
 .top-right-flower-form,
 .bottom-left-flower-form,
 .bottom-right-flower-form {
-    max-height: 20%; /* Adjust the size of flowers for smaller screens */
-    max-width: 30%;
+    max-height: 15%; /* Adjust the size of flowers for smaller screens */
+    max-width: 40%;
+}
+
+.bottom-left-flower-form,
+.bottom-right-flower-form {
+    bottom: -55%; /* Adjust the size of flowers for smaller screens */
 }
 
 input,

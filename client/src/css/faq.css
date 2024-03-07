@@ -67,3 +67,27 @@
     width: 100%;
     height: auto;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .top-left-flower-faq,
+    .top-right-flower-faq,
+    .bottom-left-flower-faq,
+    .bottom-right-flower-faq {
+        max-height: 15%;
+        max-width: 40%;
+        opacity: 30%;
+    }
+
+    .bottom-left-flower-faq,
+    .bottom-right-flower-faq {
+        bottom: -100%
+    }
+
+    .faq {
+        z-index: 9999;
+        overflow: hidden;
+        margin: 9rem 10% 0px 10%;
+    }
+
+}

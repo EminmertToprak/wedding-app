@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 7rem;
 }
 
 .map-and-location {
@@ -98,7 +99,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -391%;
+    bottom: -475%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -111,7 +112,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -391%;
+    bottom: -475%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -126,7 +127,7 @@
     margin: 0% 10% 0% 10%;
 }
 
-.suggestion {
+.suggestion-1,.suggestion-2,.suggestion-3,.suggestion-4,.suggestion-5 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -139,7 +140,7 @@
     justify-content: center;
 }
 
-.suggestion > img {
+.suggestion-1,.suggestion-2,.suggestion-3,.suggestion-4,.suggestion-5 > img {
     border-radius: 15%;
     height: 30rem;
     width: auto;
@@ -152,4 +153,97 @@ hr {
 
 #location-footer {
     position: relative;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .top-left-flower-location,
+    .top-right-flower-location,
+    .bottom-left-flower-location,
+    .bottom-right-flower-location {
+        max-height: 15%;
+        max-width: 40%;
+        opacity: 60%;
+    }
+
+    .bottom-left-flower-location,
+    .bottom-right-flower-location {
+        bottom: -590%;
+    }
+
+    .map-and-location {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-and-location img,
+    .map-image {
+        width: 100%; /* Adjust image width for smaller screens */
+        height: auto; /* Ensure image aspect ratio is maintained */
+    }
+
+    .wedding-location {
+        margin:0;
+        width: 100%;
+    }
+
+    .wedding-location a{
+        margin:0;
+        width: 100%;
+    }
+
+    .hotels {
+        flex-direction: column; /* Change flex direction to column for smaller screens */
+        align-items: center; /* Center align items for smaller screens */
+    }
+
+    .hotel {
+        margin-bottom: 1.5rem; /* Add margin between hotels for smaller screens */
+    }
+
+    .hotel-image {
+        width: 100%; /* Adjust image width for smaller screens */
+        height: auto; /* Ensure image aspect ratio is maintained */
+        border-radius: 10%; /* Retain border radius */
+    }
+
+    .suggestions,
+    .suggestion-1,.suggestion-2,.suggestion-3,.suggestion-4,.suggestion-5 {
+        margin: 0; /* Remove margin for suggestions and individual suggestion */
+    }
+
+    .suggestion-1,.suggestion-2,.suggestion-3,.suggestion-4,.suggestion-5 > img {
+        width: 100%; /* Adjust image width for individual suggestion */
+        height: auto; /* Ensure image aspect ratio is maintained */
+        border-radius: 0; /* Remove border-radius for images in individual suggestion */
+    }
+
+    .suggestion-1 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .suggestion-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suggestion-3 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .suggestion-4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suggestion-5 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .location {
+        padding: 0 20px; /* Add padding to the sides for better readability */
+    }
 }
