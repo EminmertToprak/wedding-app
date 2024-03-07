@@ -78,6 +78,10 @@ function Contact(props) {
 					<h4>Emre Arıcı</h4>
 					<sup>Brother of Ece</sup>
 					<p>📱Phone: +90 532 785 28 38</p>
+					<br />
+					<h4>Ayşe Arıcı</h4>
+					<sup>Sister in Law of Ece</sup>
+					<p>📱Phone: +90 546 866 31 05</p>
 				</div>
 				<div className="toprak-info">
 					<img className="image" src={toprakportrait} alt="Ece & Mert" />
