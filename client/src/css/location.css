@@ -29,7 +29,7 @@
 .map-image {
     width: 40rem;
     height: 40rem;
-    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.1rem rgb(0, 0, 0, .50);
 }
 
 .wedding-location {
@@ -39,7 +39,7 @@
 }
 
 .beach-club img {
-    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.1rem rgb(0, 0, 0, .50);
 }
 
 .hotels {
@@ -48,7 +48,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
     z-index: 9997;
 }
 
@@ -58,13 +58,13 @@
 }
 
 .hotel h2 {
-    font-size: 30px;
+    font-size: 2em;
 }
 
 .hotel-image {
-    width: 300px;
+    width: 20rem;
     height: auto;
-    border-radius: 20%;
+    border-radius: 10%;
 }
 
 .top-left-flower-location {
@@ -98,7 +98,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -3160px;
+    bottom: -391%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -111,7 +111,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -3160px;
+    bottom: -391%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -141,7 +141,7 @@
 
 .suggestion > img {
     border-radius: 15%;
-    height: 400px;
+    height: 30rem;
     width: auto;
 }
 

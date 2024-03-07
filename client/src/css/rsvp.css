@@ -6,20 +6,20 @@
 }
 
 .form-main {
-    max-height: 1000x;
+    max-height: 72rem;
     height: auto;
-    width: 400px;
+    width: 30rem;
     background-color: #fff;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 0.1rem;
     color: #666;
-    padding: 5px 5px;
-    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+    padding: 0.3rem 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.1rem rgb(0, 0, 0, .50);
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 5rem;
     text-align: center;
     z-index: 9997;
 }
@@ -43,7 +43,6 @@
     right: 0px;
     top: 0px;
     display: block;
-    /* width: 37%; */
     max-height: 30%;
     max-width: 50%;
 }
@@ -53,9 +52,8 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: 0px;
+    bottom: -20%;
     display: block;
-    /* width: 35%; */
     max-height: 30%;
     max-width: 50%;
     
@@ -66,9 +64,8 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: 0px;
+    bottom: -20%;
     display: block;
-    /* width: 32%; */
     max-height: 30%;
     max-width: 50%;
 }
@@ -80,13 +77,7 @@
 }
 
 .info {
-    padding: 10px;
-}
-
-h1, h2, p {
-    text-align: center;
-  padding: 0px;
-  margin: 5px 5px;
+    padding: 0.7rem;
 }
 
 @font-face {
@@ -105,22 +96,22 @@ h2 {
 
 h4 {
     margin:0;
-    margin-bottom: 10px;
+    margin-bottom: 0.7rem;
 }
 
 input {
-    font-size: 15px;
+    font-size: 1em;
     color: #666;
-    padding: 6px;
-    margin: 0px auto 10px;
+    padding: 0.3rem;
+    margin: 0px auto 0.6rem;
     display: block;
     width: 65%;    
 }
 
 select {
-    font-size: 15px;
+    font-size: 1em;
     color: #666;
-    padding: 6px;
+    padding: 0.3rem;
     margin: 0px auto 0px;
     display: block;
     width: 65%;    
@@ -132,7 +123,7 @@ input:focus {
 
 .button button {
     display: inline-block;
-    width: 400px;
+    width: 30rem;
   }
 
 button {
@@ -140,58 +131,58 @@ button {
     background-color: rgb(54, 66, 68);
     border: none;
     font-family: 'Raleway';
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: 600;
-    width: 160px;
-    height: 60px;
-    margin: 20px auto 20px auto;
+    width: 13rem;
+    height: 4rem;
+    margin: 1.5rem auto 1.5rem auto;
     text-align: center;
 }
 
 button.check-button {
-    border-radius: 10px 10px 10px 10px;
-    border-right: solid 1px white;
+    border-radius: 0.7rem;
+    border-right: solid 0.1rem white;
 }
 
 button.submit-button {
-    border-radius: 10px 10px 10px 10px;
-    border-right: solid 1px white;
+    border-radius: 0.7rem;
+    border-right: solid 0.1rem white;
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 0.7rem;
     text-align: center;
 }
 
 button.regret-button {
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 0.7rem;
     text-align: center;
 }
 
 .check-button:hover {
 background-color: #bdd7d4;
 color: #333;
-border: 1px solid gray;
+border: 0.1rem solid gray;
 transition: .5s;
 }
 
 .submit-button:hover {
     background-color: #bdd7d4;
     color: #333;
-    border: 1px solid gray;
+    border: 0.1rem solid gray;
     transition: .5s;
     }
 
 .regret-button:hover {
     background-color: rgb(204, 67, 67);
-    border: 1px solid gray;
+    border: 0.1rem solid gray;
     }
 
 
 aside {
-    margin-bottom: 10px;
+    margin-bottom: 0.7rem;
 }
 
 .location {
@@ -218,25 +209,19 @@ aside {
     left:50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    border-radius: 6px;
-    padding: 8px 8px;
-    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, 1);
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.1rem rgb(0, 0, 0, 1);
     background-image: url('../images/white-texture.jpg');
     background-size: cover;
-    border: 1px dashed #333;
+    border: 0.15rem dashed #333;
 
   }
 
-  .confirm-info h1 {
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 15px;
-    width: 800px;
-}
-
 .confirm-info p {
     font-family: 'Times New Roman', Times, serif;
-    margin: 15px;
-    font-size: 20px;
+    margin: 1rem;
+    font-size: 1.5em;
 }
 
 .popup .show {
@@ -245,8 +230,17 @@ aside {
 }
 
 .names {
-    border-bottom: 1px dashed #000;
+    border-bottom: 0.15rem dashed #000;
     text-align: center;
+}
+
+.mail-letter {
+    margin-top: 1rem;
+}
+
+.mail-letter p, .names p {
+    font-family: "Great Vibes";
+    font-size: 2rem;
 }
 
 .attending-checkboxes {
@@ -266,6 +260,142 @@ aside {
 }
 
 .checkbox {
-    width: 30px;
+    width: 2rem;
     height: auto;
+    margin-left: 1rem
+}
+
+.confirm-info h1 {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1em;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+/* Media query for phones */
+@media only screen and (max-width: 768px) {
+
+.form-div {
+    position: absolute;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.form-main {
+    width: 90%; /* Adjust the width for smaller screens */
+    max-width: auto;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.top-left-flower-form,
+.top-right-flower-form,
+.bottom-left-flower-form,
+.bottom-right-flower-form {
+    max-height: 20%; /* Adjust the size of flowers for smaller screens */
+    max-width: 30%;
+}
+
+input,
+select {
+    font-size: 1em;
+    width: 90%; /* Adjust the width of input/select fields */
+    margin: 0.3rem auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Adjust button layout for smaller screens */
+    gap: 0.1rem;
+    text-align: center;
+}
+
+button {
+    width: 50%; /* Adjust the width of buttons */
+    margin: 1rem auto;
+    font-size: large;
+}
+
+aside {
+    margin-bottom: 0.2rem;
+}
+
+.popup {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    z-index: 9999;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #bdd7d4;
+    color: #333;
+    position: fixed;
+    width: 90%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.1rem rgba(0, 0, 0, 1);
+    background-image: url('../images/white-texture.jpg');
+    background-size: cover;
+    border: 0.15rem dashed #333;
+}
+
+.confirm-info h1 {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1em;
+    font-size: 2rem;
+    margin: 0 1rem 0 2.5rem;
+}
+
+.confirm-info p {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem;
+    font-size: 1em;
+    width: auto;
+}
+
+.popup .show {
+    visibility: visible;
+    display: block;
+}
+
+.names {
+    border-bottom: 0.15rem dashed #000;
+    text-align: center;
+}
+
+.mail-letter {
+    margin-top: 1rem;
+}
+
+.mail-letter p,
+.names p {
+    font-family: "Great Vibes";
+    font-size: 2rem;
+}
+
+.attending-checkboxes {
+    display: flex;
+    flex-direction: column; /* Adjust checkbox layout for smaller screens */
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    width: 2rem;
+    height: auto;
+    margin: 0.3rem;
+}
 }
