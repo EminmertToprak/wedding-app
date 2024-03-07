@@ -314,7 +314,7 @@ select {
 
 .buttons {
     display: flex;
-    flex-direction: column; /* Adjust button layout for smaller screens */
+    flex-direction: row; /* Adjust button layout for smaller screens */
     gap: 0.1rem;
     text-align: center;
 }
