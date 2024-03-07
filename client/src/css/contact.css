@@ -27,7 +27,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -300px;
+    bottom: -44%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -39,7 +39,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -300px;
+    bottom: -44%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -47,14 +47,23 @@
 }
 
 .contacts {
-    margin-top: 100px;
+    margin-top: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .ece-mert {
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+.ece-info {
+    align-self: center;
+    text-align: center;
+
 }
 
 .phone-title {
@@ -63,14 +72,14 @@
 
 .image {
     position: relative;
-    width: 250px;
-    height: 250px;
-    box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
+    width: 15.625rem;
+    height: 15.625rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.05rem rgb(0, 0, 0, .50);
     border-radius: 50%;
 }
 
 .wedding-place {
-    margin-bottom:25px;
+    margin-bottom:2.5rem;
 }
 
 sup {

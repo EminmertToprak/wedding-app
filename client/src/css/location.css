@@ -1,5 +1,5 @@
 .location {
-    margin-top: 75px;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,20 +15,20 @@
 }
 
 .map-and-location a {
-    width: 500px;
+    width: 40rem;
     height: auto;
     align-self: center;
    
 }
 
 .map-and-location img {
-    width: 500px;
-    height: 500px;
+    width: 40rem;
+    height: 40rem;
 }
 
 .map-image {
-    width: 500px;
-    height: 500px;
+    width: 40rem;
+    height: 40rem;
     box-shadow: 2px 2px 6px 1px rgb(0, 0, 0, .50);
 }
 

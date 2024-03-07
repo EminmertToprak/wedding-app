@@ -1,12 +1,12 @@
 .faq {
     z-index: 9999;
     overflow: hidden;
-    margin: 120px 25% 0px 25%;
+    margin: 9rem 25% 0px 25%;
 }
 
 .faq ul li {
     list-style-type: none;
-    margin-top: 35px;
+    margin-top: 1rem;
 }
 
 .top-left-flower-faq {
@@ -38,7 +38,7 @@
     padding: 0px;
     margin: 0px;
     left: 0px;
-    bottom: -150px;
+    bottom: -16.6%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -50,7 +50,7 @@
     padding: 0px;
     margin: 0px;
     right: 0px;
-    bottom: -150px;
+    bottom: -16.6%;
     display: block;
     max-height: 30%;
     max-width: 40%;
@@ -58,8 +58,8 @@
 }
 
 .questions ul{
-    padding: 5px;
-    margin-bottom: 100px;
+    padding: 0.2rem;
+    margin-bottom: 15rem;
 }
 
 .faq-footer {

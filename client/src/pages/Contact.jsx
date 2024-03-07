@@ -43,6 +43,7 @@ function Contact(props) {
 							<h4>Ece</h4>
 							<p className="phone-title">📱🇳🇱 Phone:</p>
 							<p>+31 (0)6 449 85 297</p>
+							<br />
 							<p className="phone-title">📱🇹🇷 Phone & Whatsapp:</p>
 							<p>+90 535 938 12 96</p>
 							<p>
@@ -54,6 +55,7 @@ function Contact(props) {
 							<h4>Mert</h4>
 							<p className="phone-title">📱🇹🇷 Phone: </p>
 							<p>+90 535 942 49 22</p>
+							<br />
 							<p className="phone-title">📱🇳🇱 Phone & Whatsapp: </p>
 							<p>+31 (0)6 333 75 504</p>
 							<p>

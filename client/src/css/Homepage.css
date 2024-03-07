@@ -23,7 +23,7 @@ html {
     height: 100%;
     background-image: url(../images/portraits_2.png);
     background-position: 50% 50%;
-    background-size: 350px;
+    background-size: 35rem;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #bdd7d4;
@@ -91,7 +91,7 @@ a:active, a:hover {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
     text-align: center;
     scroll-behavior: smooth;
 }
@@ -109,9 +109,9 @@ div {
 .ourstorybreak {
     display: block;
     margin-right: auto;
-    margin-bottom: 35px;
+    margin-bottom: 3rem;
     margin-left: auto;
-    margin-top: 35px
+    margin-top: 3rem;
     
 }
 
@@ -120,7 +120,7 @@ div {
 }
 
 .ourstory {
-    padding-top: 65px;
+    padding-top: 3rem;
     background-color: transparent;
 }
 
@@ -128,34 +128,34 @@ div {
     display: block;
     width: 70%;
     margin-right: auto;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     margin-left: auto;
     font-family: Mandali, sans-serif;
     color: #3d3d3d;
-    font-size: 15px;
-    line-height: 26px;
-    letter-spacing: 0.2px;
+    font-size: 1em;
+    line-height: 2em;
+    letter-spacing: 0.07em;
 }
 
 .headline1 {
     display: block;
     width: 70%;
-    margin: 10px auto 25px;
+    margin: 1rem auto 3rem;
     font-family: 'Great Vibes', sans-serif;
-    font-size: 50px;
+    font-size: 3.5em;
     font-weight: 400;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 0.07em;
 }
 
 .w-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 940px;
+    max-width: 70%;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 3.5em;
 }
 
 .time-and-date {
@@ -170,7 +170,7 @@ h2 {
 
 .date img {
     display: block;
-    margin-top: 20px;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     padding: 0%;
@@ -182,8 +182,8 @@ h2 {
     display: flex;
     flex-direction: column;
     white-space: nowrap;
-    gap: 15px;
-    margin-bottom: 50px;
+    gap: 0.5rem;
+    margin-bottom: 6rem;
 }
 
 .wedding-ceramony, .party {
@@ -191,29 +191,15 @@ h2 {
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
-    margin: 15px;
+    margin: 0.5rem;
 }
 
 .time h4 {
     text-align: center;
     font-family: 'Great Vibes';
-    font-size: 35px;
-}
-
-.time img {
-    display: block;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0%;
-    width: 35%;
-    height: auto;
-    border: 10px solid black;
-    background: linear-gradient(to top, rgba(#cffffe, 0.3), rgba(#f9f7d9, 0.3), rgba(#fce2ce, 0.3), rgba(#ffc1f3, 0.3));
-  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
-
+    font-size: 2em;
 }
 
 .save-the-date {
-    margin-top: 45px
+    margin-top: 1rem
 }
