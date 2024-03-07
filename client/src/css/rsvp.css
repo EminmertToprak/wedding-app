@@ -355,6 +355,7 @@ aside {
     background-image: url('../images/white-texture.jpg');
     background-size: cover;
     border: 0.15rem dashed #333;
+    overflow-y: auto;
 }
 
 .confirm-info h1 {
