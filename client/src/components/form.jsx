@@ -212,10 +212,11 @@ function Form() {
 				)}
 				<div className="form-main">
 					<div className="info">
-						<h1>RSVP</h1>
+						<h1 className="info-rsvp">RSVP</h1>
 						<h2>for the wedding of</h2>
 						<h1>Ece & Mert</h1>
-						<hr />
+						<h1 className="please-response">Kindly respond by May 1st.</h1>
+						<hr className="line" />
 					</div>
 					<form method="POST" className="form-info" onSubmit={confirmation}>
 						<h4>🖊️ Name & E-mail</h4>

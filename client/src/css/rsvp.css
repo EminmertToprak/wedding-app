@@ -5,6 +5,10 @@
     width: 100%;
 }
 
+hr.line {
+    margin-top: 0.1rem;
+}
+
 .form-main {
     max-height: 72rem;
     height: auto;
@@ -97,6 +101,13 @@ h2 {
 h4 {
     margin:0;
     margin-bottom: 0.7rem;
+}
+
+
+
+.please-response {
+    font-size: 75%;
+    margin: 0px;
 }
 
 input {
@@ -272,6 +283,13 @@ aside {
     text-align: center;
 }
 
+.info-rsvp {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1em;
+    font-size: 2rem;
+    margin: 0 1rem 0 2.5rem;
+}
+
 
 
 /* Media query for phones */
@@ -329,6 +347,8 @@ aside {
     margin-bottom: 0.2rem;
 }
 
+
+
 .popup {
     visibility: hidden;
     position: absolute;
@@ -357,6 +377,8 @@ aside {
     border: 0.15rem dashed #333;
     overflow-y: auto;
 }
+
+
 
 .confirm-info h1 {
     font-family: 'Times New Roman', Times, serif;
