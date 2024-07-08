@@ -8,21 +8,20 @@ const AdminPage = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const pageSize = 10; // Number of items per page
 
-	const fetchRsvps = async () => {
-		try {
-			const response = await fetch(
-				`/functions/rsvp/get?take=${pageSize}&skip=${
-					(currentPage - 1) * pageSize
-				}`
-			);
-			const data = await response.json();
-			setRsvps(data);
-		} catch (error) {
-			console.error('Error fetching RSVP elements:', error);
-		}
-	};
-
 	useEffect(() => {
+		const fetchRsvps = async () => {
+			try {
+				const response = await fetch(
+					`/functions/rsvp/get?take=${pageSize}&skip=${
+						(currentPage - 1) * pageSize
+					}`
+				);
+				const data = await response.json();
+				setRsvps(data);
+			} catch (error) {
+				console.error('Error fetching RSVP elements:', error);
+			}
+		};
 		fetchRsvps();
 	}, [currentPage, pageSize]);
 
