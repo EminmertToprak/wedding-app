@@ -5,6 +5,7 @@ import FAQ from './pages/FAQ';
 import Location from './pages/Location';
 import Contact from './pages/Contact';
 import Navbar from './components/navbar';
+import Admin from './pages/admin.tsx';
 
 import './css/App.css';
 
@@ -19,6 +20,7 @@ function App() {
 					<Route path="/faq" element={<FAQ />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/location" element={<Location />} />
+					<Route path="/admin" element={<Admin />} />
 				</Routes>
 			</div>
 		</>
