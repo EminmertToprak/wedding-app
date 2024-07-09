@@ -104,7 +104,3 @@ async function ParseRequestBody(req: { body: ReadableStream<Uint8Array> }) {
 	const bodyBuffer = Buffer.concat(chunks);
 	return JSON.parse(bodyBuffer.toString());
 }
-
-export const config: Config = {
-	path: ["/.netlify/functions/rsvp/:id", "/.netlify/functions/rsvp"]
-  };
