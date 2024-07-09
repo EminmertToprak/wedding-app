@@ -1,8 +1,5 @@
 import { Config, Context } from '@netlify/functions';
 
-const connectDb = require('./domain/service/db.mjs').default;
-const RSVP = require('./domain/models/rsvp.model');
-
 const sharedResponse = {
 	headers: {
 		'Access-Control-Allow-Origin': '*',
@@ -32,10 +29,6 @@ async function HandleOptions(req: Request, context: Context) {
 async function HandlePost(req: Request, context: Context) {
 	try {
 		let body = await ParseRequestBody(req as { body: ReadableStream<Uint8Array> });
-		console.log(body);
-		const newRSVP = new RSVP(body);
-		connectDb();
-		await newRSVP.save();
 		return new Response(`SUCCESS!`, sharedResponse);
 	} catch (error) {
 		console.error('Error submitting RSVP:', error);
@@ -48,8 +41,6 @@ async function HandlePost(req: Request, context: Context) {
 
 async function HandleGet(req: Request, context: Context) {
     try {
-        connectDb();
-
 		const url = new URL(req.url);
   
 		const skip = url.searchParams.get('skip');
@@ -57,9 +48,8 @@ async function HandleGet(req: Request, context: Context) {
 		
 		const skipNumber = skip ? parseInt(skip) : 0;
 		const takeNumber = take ? parseInt(take) : 10;
-		const rsvps = await RSVP.find().skip(skipNumber).limit(takeNumber);
         
-        return new Response(JSON.stringify(rsvps), sharedResponse);
+        return new Response(JSON.stringify("[]"), sharedResponse);
     } catch (error) {
         console.error('Error getting RSVP:', error);
         return new Response(`Error: ${error}`, {
@@ -79,9 +69,7 @@ async function HandleDelete(req: Request, context: Context) {
 		});
 
 	//connect db
-	connectDb();
 	//delete rsvp from db
-	await RSVP.findByIdAndDelete(id);
 	return new Response(`SUCCESS!`, sharedResponse);
 }
 
@@ -106,5 +94,5 @@ async function ParseRequestBody(req: { body: ReadableStream<Uint8Array> }) {
 }
 
 export const config: Config = {
-	path: ["/.netlify/functions/rsvp", "/.netlify/functions/rsvp/:id"]
+	path: ["/.netlify/functions/test", "/.netlify/functions/test/:id"]
   };
