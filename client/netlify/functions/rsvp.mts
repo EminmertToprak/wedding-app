@@ -106,5 +106,5 @@ async function ParseRequestBody(req: { body: ReadableStream<Uint8Array> }) {
 }
 
 export const config: Config = {
-	path: ["/.netlify/functions/rsvp", "/.netlify/functions/rsvp/:id"]
+	path: ["/.netlify/functions/test", "/.netlify/functions/test/:id"]
   };
