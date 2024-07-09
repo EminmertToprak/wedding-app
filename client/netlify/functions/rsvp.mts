@@ -1,4 +1,4 @@
-import { Context } from '@netlify/functions';
+import { Config, Context } from '@netlify/functions';
 
 const connectDb = require('../../domain/service/db.mjs').default;
 const RSVP = require('../../domain/models/rsvp.model');
@@ -105,6 +105,6 @@ async function ParseRequestBody(req: { body: ReadableStream<Uint8Array> }) {
 	return JSON.parse(bodyBuffer.toString());
 }
 
-export const config = {
-	path: ['/functions/rsvp', '/functions/rsvp/:id'],
-};
+export const config: Config = {
+	path: ["/functions/rsvp", "/functions/rsvp/:id"]
+  };
