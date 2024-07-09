@@ -1,5 +1,8 @@
 import { Config, Context } from '@netlify/functions';
 
+const connectDb = require('./domain/service/db.mjs').default;
+const Hotel = require('./domain/models/hotel.model');
+
 const sharedResponse = {
 	headers: {
 		'Access-Control-Allow-Origin': '*',
@@ -29,9 +32,12 @@ async function HandleOptions(req: Request, context: Context) {
 async function HandlePost(req: Request, context: Context) {
 	try {
 		let body = await ParseRequestBody(req as { body: ReadableStream<Uint8Array> });
+		const newEntity = new Hotel(body);
+		connectDb();
+		await newEntity.save();
 		return new Response(`SUCCESS!`, sharedResponse);
 	} catch (error) {
-		console.error('Error submitting RSVP:', error);
+		console.error('Error submitting Hotel:', error);
 		return new Response(`Error: ${error}`, {
 			status: 400,
 			headers: sharedResponse.headers,
@@ -41,15 +47,20 @@ async function HandlePost(req: Request, context: Context) {
 
 async function HandleGet(req: Request, context: Context) {
     try {
+        connectDb();
+
 		const url = new URL(req.url);
   
 		const skip = url.searchParams.get('skip');
 		const take = url.searchParams.get('take');
 		
 		const skipNumber = skip ? parseInt(skip) : 0;
-		const takeNumber = take ? parseInt(take) : 10;
+		let takeNumber = take ? parseInt(take) : 10;
+		if(takeNumber > 10 ) takeNumber = 10;
+		
+		const hotels = await Hotel.find().skip(skipNumber).limit(takeNumber);
         
-        return new Response(JSON.stringify("[]"), sharedResponse);
+        return new Response(JSON.stringify(hotels), sharedResponse);
     } catch (error) {
         console.error('Error getting RSVP:', error);
         return new Response(`Error: ${error}`, {
@@ -68,8 +79,8 @@ async function HandleDelete(req: Request, context: Context) {
 			headers: sharedResponse.headers,
 		});
 
-	//connect db
-	//delete rsvp from db
+	connectDb();
+	await Hotel.findByIdAndDelete(id);
 	return new Response(`SUCCESS!`, sharedResponse);
 }
 
@@ -92,7 +103,3 @@ async function ParseRequestBody(req: { body: ReadableStream<Uint8Array> }) {
 	const bodyBuffer = Buffer.concat(chunks);
 	return JSON.parse(bodyBuffer.toString());
 }
-
-export const config: Config = {
-	path: ["/.netlify/functions/test", "/.netlify/functions/test/:id"]
-  };

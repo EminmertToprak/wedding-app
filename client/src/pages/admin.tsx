@@ -1,29 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import '../css/admin.css';
+import { GetRsvps } from '../services/rsvpService.tsx';
+import RsvpModel from '../services/models/rsvpModel';
 
 const AdminPage = () => {
-	const [rsvps, setRsvps] = useState<
-		{ id: string; name: string; email: string }[]
-	>([]);
+	const [rsvps, setRsvps] = useState<RsvpModel[]>([]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const pageSize = 10; // Number of items per page
 
 	useEffect(() => {
-		const fetchRsvps = async () => {
-			try {
-				const response = await fetch(
-					`/functions/rsvp/get?take=${pageSize}&skip=${
-						(currentPage - 1) * pageSize
-					}`
-				);
-				const data = await response.json();
-				setRsvps(data);
-			} catch (error) {
-				console.error('Error fetching RSVP elements:', error);
-			}
-		};
-		fetchRsvps();
-	}, [currentPage, pageSize]);
+		GetRsvps(pageSize, (currentPage - 1) * pageSize)
+			.then((x) => {
+				setRsvps(x);
+			})
+			.catch((err) => console.log(err));
+	}, [currentPage]);
 
 	const handlePrevClick = () => {
 		setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));

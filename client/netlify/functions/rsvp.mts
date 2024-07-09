@@ -32,7 +32,6 @@ async function HandleOptions(req: Request, context: Context) {
 async function HandlePost(req: Request, context: Context) {
 	try {
 		let body = await ParseRequestBody(req as { body: ReadableStream<Uint8Array> });
-		console.log(body);
 		const newRSVP = new RSVP(body);
 		connectDb();
 		await newRSVP.save();
@@ -56,7 +55,9 @@ async function HandleGet(req: Request, context: Context) {
 		const take = url.searchParams.get('take');
 		
 		const skipNumber = skip ? parseInt(skip) : 0;
-		const takeNumber = take ? parseInt(take) : 10;
+		let takeNumber = take ? parseInt(take) : 10;
+		if(takeNumber > 10 ) takeNumber = 10;
+
 		const rsvps = await RSVP.find().skip(skipNumber).limit(takeNumber);
         
         return new Response(JSON.stringify(rsvps), sharedResponse);

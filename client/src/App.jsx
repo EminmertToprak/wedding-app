@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import RSVP from './pages/RSVP';
 import FAQ from './pages/FAQ';
-import Location from './pages/Location';
+import Location from './pages/Location.tsx';
 import Contact from './pages/Contact';
 import Navbar from './components/navbar.tsx';
 import Admin from './pages/admin.tsx';

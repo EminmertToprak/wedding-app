@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/location.css';
 import '../css/footer.css';
 import Footer from '../components/footer.tsx';
@@ -17,7 +17,22 @@ import ida from '../images/ida.jpg';
 import zeytinyag from '../images/zeytinyag.png';
 import weddingPlace from '../images/wedding-place.jpg';
 
+import HotelModel from '../services/models/hotelModel.tsx';
+import { GetHotels } from '../services/hotelService.tsx';
+
 const Location = () => {
+	const [hotels, setHotels] = useState<HotelModel[]>([]);
+	const [currentHotelPage, setCurrentHotelPage] = useState(1);
+	const pageSize = 10;
+
+	useEffect(() => {
+		GetHotels(pageSize, (currentHotelPage - 1) * pageSize)
+			.then((x) => {
+				setHotels(x);
+			})
+			.catch((err) => console.log(err));
+	}, [currentHotelPage]);
+
 	return (
 		<>
 			<img
