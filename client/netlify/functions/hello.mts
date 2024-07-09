@@ -14,7 +14,3 @@ export default async (req: Request, context: Context) => {
 		headers: sharedResponse.headers,
 	});
 };
-
-export const config = {
-	path: ['/functions/hello'],
-};
