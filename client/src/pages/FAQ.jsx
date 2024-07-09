@@ -1,6 +1,6 @@
 import '../css/faq.css';
 import '../css/footer.css';
-import Footer from '../components/footer';
+import Footer from '../components/footer.tsx';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';

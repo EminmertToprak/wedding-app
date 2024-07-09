@@ -4,7 +4,7 @@ import RSVP from './pages/RSVP';
 import FAQ from './pages/FAQ';
 import Location from './pages/Location';
 import Contact from './pages/Contact';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar.tsx';
 import Admin from './pages/admin.tsx';
 
 import './css/App.css';

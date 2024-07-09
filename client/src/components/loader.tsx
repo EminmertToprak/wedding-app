@@ -1,6 +1,7 @@
 import '../css/loader.css';
+import React from 'react';
 
-function Loader() {
+function Loader(): JSX.Element {
 	return (
 		<div className="sound-wave">
 			<div></div>

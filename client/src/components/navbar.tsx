@@ -2,7 +2,7 @@ import '../css/navbar.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(): JSX.Element {
 	const [showMenu, setShowMenu] = useState(false);
 
 	const toggleMenu = () => {

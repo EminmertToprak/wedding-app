@@ -1,5 +1,5 @@
-import Form from '../components/form';
-import Footer from '../components/footer';
+import Form from '../components/form.tsx';
+import Footer from '../components/footer.tsx';
 import '../css/rsvp.css';
 import '../css/footer.css';
 

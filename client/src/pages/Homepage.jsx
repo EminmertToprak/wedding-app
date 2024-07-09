@@ -7,7 +7,7 @@ import ourStoryBreak from '../images/OurStoryBreak.png';
 import dateGif from '../images/2024_white.gif';
 import '../css/Homepage.css';
 import '../css/footer.css';
-import Footer from '../components/footer';
+import Footer from '../components/footer.tsx';
 
 function Homepage(props) {
 	return (

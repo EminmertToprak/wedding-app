@@ -1,6 +1,6 @@
-import '../css/footer.css';
+import React from 'react';
 
-function Footer() {
+const Footer: React.FC = (): JSX.Element => {
 	return (
 		<div className="footer">
 			<p className="made-with-love">
@@ -12,6 +12,6 @@ function Footer() {
 			</p>
 		</div>
 	);
-}
+};
 
 export default Footer;

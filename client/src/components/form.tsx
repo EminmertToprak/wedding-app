@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Loader from './loader';
+import Loader from './loader.tsx';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
-
+import React from 'react';
 import '../css/rsvp.css';
 import '../css/footer.css';
 
 import unchecked from '../images/empty_checkbox.png';
 import checked from '../images/checked_checkbox.png';
 
-function Form() {
+function Form(): JSX.Element {
 	const [name, setName] = useState('');
 	const [guestName, setGuestName] = useState('');
 	const [email, setEmail] = useState('');
@@ -26,7 +26,9 @@ function Form() {
 	function confirmation(e) {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
-		popup.classList.toggle('show');
+		if (popup) {
+			popup.classList.toggle('show');
+		}
 	}
 
 	let navigate = useNavigate();
@@ -73,7 +75,7 @@ function Form() {
 	const closePopup = async (e) => {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
-		popup.classList.remove('show');
+		popup?.classList.remove('show');
 	};
 
 	const handlePlusOneChange = (e) => {
