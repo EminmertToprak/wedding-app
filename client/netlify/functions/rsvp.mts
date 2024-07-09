@@ -1,7 +1,7 @@
 import { Context } from '@netlify/functions';
 
-const connectDb = require('./service/db.mts').default;
-const RSVP = require('./models/rsvp.model');
+const connectDb = require('../../domain/service/db.mjs').default;
+const RSVP = require('../../domain/models/rsvp.model');
 
 const sharedResponse = {
 	headers: {
