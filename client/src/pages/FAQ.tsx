@@ -1,12 +1,13 @@
 import '../css/faq.css';
 import '../css/footer.css';
+import React from 'react';
 import Footer from '../components/footer.tsx';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 
-function FAQ(props) {
+function FAQ(props): JSX.Element {
 	return (
 		<>
 			<div className="faq">

@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Footer: React.FC = (): JSX.Element => {
+type FooterProps = {};
+
+const Footer: React.FC<FooterProps> = () => {
 	return (
 		<div className="footer">
 			<p className="made-with-love">

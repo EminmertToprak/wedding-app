@@ -1,15 +1,7 @@
 import { Config, Context } from '@netlify/functions';
 
-const connectDb = require('./domain/service/db.mjs').default;
+const connectDb = require('./domain/service/db.mts').default;
 const RSVP = require('./domain/models/rsvp.model');
-
-const sharedResponse = {
-	headers: {
-		'Access-Control-Allow-Origin': '*',
-		'Access-Control-Allow-Methods': 'POST, GET, DELETE',
-		'Access-Control-Allow-Headers': 'Content-Type',
-	},
-};
 
 export default async (req: Request, context: Context) => {
 	if (req.method === 'OPTIONS') return HandleOptions(req, context);
@@ -18,14 +10,13 @@ export default async (req: Request, context: Context) => {
 	if (req.method === 'DELETE') return HandleDelete(req, context);
 
 	return new Response('BAD REQUEST', {
-		status: 400,
-		headers: sharedResponse.headers,
+		status: 400
 	});
 };
 
 //[OPTIONS] /rsvp
 async function HandleOptions(req: Request, context: Context) {
-	return new Response(null, sharedResponse);
+	return new Response(null);
 }
 
 //[POST] /rsvp
@@ -33,22 +24,20 @@ async function HandlePost(req: Request, context: Context) {
 	try {
 		let body = await ParseRequestBody(req as { body: ReadableStream<Uint8Array> });
 		const newRSVP = new RSVP(body);
-		connectDb();
+		await connectDb();
 		await newRSVP.save();
-		return new Response(`SUCCESS!`, sharedResponse);
+		return new Response(`SUCCESS!`);
 	} catch (error) {
 		console.error('Error submitting RSVP:', error);
 		return new Response(`Error: ${error}`, {
-			status: 400,
-			headers: sharedResponse.headers,
+			status: 400
 		});
 	}
 }
 
 async function HandleGet(req: Request, context: Context) {
     try {
-        connectDb();
-
+    await connectDb();
 		const url = new URL(req.url);
   
 		const skip = url.searchParams.get('skip');
@@ -60,30 +49,27 @@ async function HandleGet(req: Request, context: Context) {
 
 		const rsvps = await RSVP.find().skip(skipNumber).limit(takeNumber);
         
-        return new Response(JSON.stringify(rsvps), sharedResponse);
+        return new Response(JSON.stringify(rsvps));
     } catch (error) {
         console.error('Error getting RSVP:', error);
         return new Response(`Error: ${error}`, {
-            status: 400,
-            headers: sharedResponse.headers,
+            status: 400
         });
     }
 }
 
 async function HandleDelete(req: Request, context: Context) {
-	let { id } = context.params;
+  const id = req.url.split('/').pop();
+  console.log(id);
 	
-	if (id == null)
+	if (!id || id === undefined || id === "rsvp")
 		new Response(`Error`, {
-			status: 400,
-			headers: sharedResponse.headers,
+			status: 400
 		});
 
-	//connect db
-	connectDb();
-	//delete rsvp from db
+	await connectDb();
 	await RSVP.findByIdAndDelete(id);
-	return new Response(`SUCCESS!`, sharedResponse);
+	return new Response(`SUCCESS!`);
 }
 
 async function ParseRequestBody(req: { body: ReadableStream<Uint8Array> }) {

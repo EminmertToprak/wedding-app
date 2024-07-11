@@ -1,17 +1,17 @@
 import '../css/contact.css';
 import '../css/footer.css';
+import React from 'react';
 import ecemertportrait from '../images/ece_and_mert.jpg';
 import ariciportrait from '../images/nabi_kadriye.png';
 import toprakportrait from '../images/tekin_ayla.png';
 import weddingplace from '../images/marenostrum.png';
 import Footer from '../components/footer.tsx';
-
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
 import flowerBottomRight from '../images/flowers_bottom_right.png';
 
-function Contact(props) {
+function Contact(props): JSX.Element {
 	return (
 		<>
 			<img

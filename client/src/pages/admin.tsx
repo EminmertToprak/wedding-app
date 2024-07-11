@@ -6,12 +6,12 @@ import RsvpModel from '../services/models/rsvpModel';
 const AdminPage = () => {
 	const [rsvps, setRsvps] = useState<RsvpModel[]>([]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const pageSize = 10; // Number of items per page
+	const pageSize = 10;
 
 	useEffect(() => {
 		GetRsvps(pageSize, (currentPage - 1) * pageSize)
-			.then((x) => {
-				setRsvps(x);
+			.then((res) => {
+				setRsvps(res);
 			})
 			.catch((err) => console.log(err));
 	}, [currentPage]);
@@ -30,7 +30,8 @@ const AdminPage = () => {
 			<ul>
 				{rsvps.map((rsvp) => (
 					<li key={rsvp.id}>
-						{rsvp.name} - {rsvp.email}
+						{rsvp.name} - {rsvp.email} -{' '}
+						{rsvp.attending ? 'Attending' : 'Not Attending'}
 					</li>
 				))}
 			</ul>

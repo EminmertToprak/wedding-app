@@ -1,7 +1,7 @@
 import '../css/loader.css';
 import React from 'react';
 
-function Loader(): JSX.Element {
+const Loader: React.FC = () => {
 	return (
 		<div className="sound-wave">
 			<div></div>
@@ -11,6 +11,6 @@ function Loader(): JSX.Element {
 			<div></div>
 		</div>
 	);
-}
+};
 
 export default Loader;

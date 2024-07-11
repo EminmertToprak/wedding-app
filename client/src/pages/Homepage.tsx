@@ -5,6 +5,7 @@ import flowerBottomRight from '../images/flowers_bottom_right.png';
 import arrow from '../images/arrow.png';
 import ourStoryBreak from '../images/OurStoryBreak.png';
 import dateGif from '../images/2024_white.gif';
+import React from 'react';
 import '../css/Homepage.css';
 import '../css/footer.css';
 import Footer from '../components/footer.tsx';

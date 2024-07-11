@@ -1,8 +1,16 @@
-import '../css/navbar.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/navbar.css'; // Import CSS directly
 
-function Navbar(): JSX.Element {
+const menuItems = [
+	{ path: '/', label: 'Home' },
+	{ path: '/rsvp', label: 'RSVP' },
+	{ path: '/location', label: 'Location' },
+	{ path: '/contact', label: 'Contact' },
+	{ path: '/faq', label: 'FAQ' },
+];
+
+const Navbar: React.FC = () => {
 	const [showMenu, setShowMenu] = useState(false);
 
 	const toggleMenu = () => {
@@ -12,24 +20,19 @@ function Navbar(): JSX.Element {
 	return (
 		<div className="navbar">
 			<div className="menu-items">
-				<Link className="menu-button" to="/" onClick={toggleMenu}>
-					Home
-				</Link>
-				<Link className="menu-button" to="/rsvp" onClick={toggleMenu}>
-					RSVP
-				</Link>
-				<Link className="menu-button" to="/location" onClick={toggleMenu}>
-					Location
-				</Link>
-				<Link className="menu-button" to="/contact" onClick={toggleMenu}>
-					Contact
-				</Link>
-				<Link className="menu-button" to="/faq" onClick={toggleMenu}>
-					FAQ
-				</Link>
+				{menuItems.map((item, index) => (
+					<Link
+						key={index}
+						className="menu-button"
+						to={item.path}
+						onClick={toggleMenu}
+					>
+						{item.label}
+					</Link>
+				))}
 			</div>
 		</div>
 	);
-}
+};
 
 export default Navbar;

@@ -13,7 +13,7 @@ import '../css/footer.css';
 import unchecked from '../images/empty_checkbox.png';
 import checked from '../images/checked_checkbox.png';
 
-function Form(): JSX.Element {
+const Form: React.FC = () => {
 	const [name, setName] = useState('');
 	const [guestName, setGuestName] = useState('');
 	const [email, setEmail] = useState('');
@@ -312,6 +312,6 @@ function Form(): JSX.Element {
 			</div>
 		</>
 	);
-}
+};
 
 export default Form;
