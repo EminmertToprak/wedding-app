@@ -1,10 +1,7 @@
 [build]
-  base = "client"
-  publish = "client/build"
+  base = "/client"
+  publish = "/client/build"
   command = "npm run build"
-
-[build.environment]
-  MONGODB_URI = "mongodb+srv://admin:UxhA7Z89iEgOZkMp@personalcluster.mhlbkqw.mongodb.net/?retryWrites=true&w=majority"
 
 [functions]
   directory = "netlify/functions"
