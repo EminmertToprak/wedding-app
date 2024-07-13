@@ -292,7 +292,6 @@ aside {
 
 
 
-/* Media query for phones */
 @media only screen and (max-width: 768px) {
 
 .form-div {
@@ -303,7 +302,7 @@ aside {
 }
 
 .form-main {
-    width: 90%; /* Adjust the width for smaller screens */
+    width: 90%;
     max-width: auto;
     margin: auto;
     margin-top: 5rem;
@@ -314,31 +313,31 @@ aside {
 .top-right-flower-form,
 .bottom-left-flower-form,
 .bottom-right-flower-form {
-    max-height: 15%; /* Adjust the size of flowers for smaller screens */
+    max-height: 15%;
     max-width: 40%;
 }
 
 .bottom-left-flower-form,
 .bottom-right-flower-form {
-    bottom: -55%; /* Adjust the size of flowers for smaller screens */
+    bottom: -55%;
 }
 
 input,
 select {
     font-size: 1em;
-    width: 90%; /* Adjust the width of input/select fields */
+    width: 90%;
     margin: 0.3rem auto;
 }
 
 .buttons {
     display: flex;
-    flex-direction: row; /* Adjust button layout for smaller screens */
+    flex-direction: row;
     gap: 0.1rem;
     text-align: center;
 }
 
 button {
-    width: 50%; /* Adjust the width of buttons */
+    width: 50%;
     margin: 1rem auto;
     font-size: large;
 }
@@ -416,7 +415,7 @@ aside {
 
 .attending-checkboxes {
     display: flex;
-    flex-direction: column; /* Adjust checkbox layout for smaller screens */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
