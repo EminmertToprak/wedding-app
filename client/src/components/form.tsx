@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Loader from './loader.tsx';
+import Loader from './Loader.tsx';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
@@ -23,7 +23,7 @@ const Form: React.FC = () => {
 	const [plusOneDietary, setPlusOneDietary] = useState('');
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
-	function confirmation(e) {
+	function confirmation(e: { preventDefault: () => void }) {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
 		if (popup) {
@@ -33,7 +33,7 @@ const Form: React.FC = () => {
 
 	let navigate = useNavigate();
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = async (e: { preventDefault: () => void }) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		const requestBody = {
@@ -46,11 +46,9 @@ const Form: React.FC = () => {
 			plusOneDietary,
 		};
 
-		// Deployment Based on Environment
 		const baseURL = process.env.REACT_APP_SERVER_URI;
 
 		try {
-			// Sending POST request to backend
 			await axios.post(`${baseURL}/rsvp`, requestBody);
 			console.log('RSVP submitted succesfully!');
 			alert('See you there!');
@@ -63,7 +61,7 @@ const Form: React.FC = () => {
 		}
 	};
 
-	const regretButton = async (e) => {
+	const regretButton = async (e: { preventDefault: () => void }) => {
 		e.preventDefault();
 		try {
 			navigate(`/`);
@@ -72,13 +70,15 @@ const Form: React.FC = () => {
 		}
 	};
 
-	const closePopup = async (e) => {
+	const closePopup = async (e: { preventDefault: () => void }) => {
 		e.preventDefault();
 		let popup = document.getElementById('myPopup');
 		popup?.classList.remove('show');
 	};
 
-	const handlePlusOneChange = (e) => {
+	const handlePlusOneChange = (e: {
+		target: { checked: boolean | ((prevState: boolean) => boolean) };
+	}) => {
 		setPlusOne(e.target.checked);
 		if (!e.target.checked) {
 			setGuestName('');

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/navbar.css'; // Import CSS directly
+import '../css/navbar.css';
 
 const menuItems = [
 	{ path: '/', label: 'Home' },

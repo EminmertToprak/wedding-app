@@ -1,7 +1,7 @@
 import '../css/faq.css';
 import '../css/footer.css';
 import React from 'react';
-import Footer from '../components/footer.tsx';
+import Footer from '../components/Footer.tsx';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
@@ -88,7 +88,7 @@ function FAQ(props): JSX.Element {
 				</div>
 			</div>
 			<div className="faq-footer">
-				<Footer />
+				<Footer name="Mert Toprak" link="https://mert-toprak.netlify.app/" />
 			</div>
 		</>
 	);

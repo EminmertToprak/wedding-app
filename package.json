@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/node": "^20.14.10"
+  },
+  "dependencies": {
+    "antd": "^5.19.1"
   }
 }

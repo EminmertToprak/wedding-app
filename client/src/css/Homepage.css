@@ -229,7 +229,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
     .w-container {
-        max-width: 90%; /* Adjust the max-width for smaller screens */
+        max-width: 90%;
     }
 
     .images {
@@ -246,11 +246,11 @@ h2 {
 
     .body1,
     .headline1 {
-        width: 90%; /* Adjust the width of text content */
+        width: 90%;
     }
 
     .downarrowlinkblock {
-        bottom: 1rem; /* Adjust the position of the arrow link */
+        bottom: 1rem;
     }
 
     .time-and-date {
@@ -267,15 +267,15 @@ h2 {
     }
 
     .time h4 {
-        font-size: 1.5em; /* Adjust the font size for time */
+        font-size: 1.5em;
     }
 
     .save-the-date {
-        margin-top: 0.5rem; /* Adjust the margin for the save the date section */
+        margin-top: 0.5rem;
     }
 
     .date img {
-        margin-top: 0.5rem; /* Adjust the margin for the date image */
+        margin-top: 0.5rem;
     }
 
     .bottom-left-flower,

@@ -1,8 +1,11 @@
 import React from 'react';
 
-type FooterProps = {};
+type FooterProps = {
+	name: string;
+	link: string;
+};
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC<FooterProps> = ({ name, link }) => {
 	return (
 		<div className="footer">
 			<p className="made-with-love">
@@ -10,7 +13,7 @@ const Footer: React.FC<FooterProps> = () => {
 				<i className="heart" aria-label="love">
 					&#10084;
 				</i>{' '}
-				by <a href="https://mert-toprak.netlify.app/">Mert Toprak</a>
+				by <a href={link}>{name}</a>
 			</p>
 		</div>
 	);

@@ -4,8 +4,8 @@ import RSVP from './pages/RSVP.tsx';
 import FAQ from './pages/FAQ.tsx';
 import Location from './pages/Location.tsx';
 import Contact from './pages/Contact.tsx';
-import Navbar from './components/navbar.tsx';
-import Admin from './pages/admin.tsx';
+import Navbar from './components/Navbar.tsx';
+import Admin from './pages/Admin.tsx';
 import React from 'react';
 import './css/App.css';
 

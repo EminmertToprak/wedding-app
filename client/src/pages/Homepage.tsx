@@ -8,7 +8,7 @@ import dateGif from '../images/2024_white.gif';
 import React from 'react';
 import '../css/Homepage.css';
 import '../css/footer.css';
-import Footer from '../components/footer.tsx';
+import Footer from '../components/Footer.tsx';
 
 function Homepage(props) {
 	return (
@@ -109,7 +109,10 @@ function Homepage(props) {
 								<h4>20:30</h4>
 							</div>
 						</div>
-						<Footer />
+						<Footer
+							name="Mert Toprak"
+							link="https://mert-toprak.netlify.app/"
+						/>
 					</div>
 				</div>
 			</div>

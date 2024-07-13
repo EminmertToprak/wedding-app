@@ -5,7 +5,7 @@ import ecemertportrait from '../images/ece_and_mert.jpg';
 import ariciportrait from '../images/nabi_kadriye.png';
 import toprakportrait from '../images/tekin_ayla.png';
 import weddingplace from '../images/marenostrum.png';
-import Footer from '../components/footer.tsx';
+import Footer from '../components/Footer.tsx';
 import flowerTopLeft from '../images/flowers_top_left.png';
 import flowerTopRight from '../images/flowers_top_right.png';
 import flowerBottomLeft from '../images/flowers_bottom_left.png';
@@ -79,7 +79,7 @@ function Contact(props): JSX.Element {
 				<p>Phone: +90 533 021 88 90</p>
 			</div>
 			<div id="contact-footer">
-				<Footer />
+				<Footer name="Mert Toprak" link="https://mert-toprak.netlify.app/" />
 			</div>
 		</>
 	);
