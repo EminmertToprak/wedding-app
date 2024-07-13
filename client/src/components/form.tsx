@@ -2,14 +2,10 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Loader from './Loader.tsx';
-import flowerTopLeft from '../images/flowers_top_left.png';
-import flowerTopRight from '../images/flowers_top_right.png';
-import flowerBottomLeft from '../images/flowers_bottom_left.png';
-import flowerBottomRight from '../images/flowers_bottom_right.png';
 import React from 'react';
 import '../css/rsvp.css';
 import '../css/footer.css';
-
+import renderFlowers from './Flowers.tsx';
 import unchecked from '../images/empty_checkbox.png';
 import checked from '../images/checked_checkbox.png';
 
@@ -91,26 +87,7 @@ const Form: React.FC = () => {
 	return (
 		<>
 			<div className="form-div">
-				<img
-					className="top-left-flower-form"
-					src={flowerTopLeft}
-					alt="flower_top_left"
-				/>
-				<img
-					className="top-right-flower-form"
-					src={flowerTopRight}
-					alt="flower_top_right"
-				/>
-				<img
-					className="bottom-left-flower-form"
-					src={flowerBottomLeft}
-					alt="flower_bottom_left"
-				/>
-				<img
-					className="bottom-right-flower-form"
-					src={flowerBottomRight}
-					alt="flower_bottom_right"
-				/>
+				<div className="flowers">{renderFlowers('form')}</div>
 				<div className="popup">
 					<span className="popuptext" id="myPopup">
 						<div className="confirm-info">

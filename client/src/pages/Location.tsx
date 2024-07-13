@@ -17,7 +17,7 @@ import ida from '../images/ida.jpg';
 import zeytinyag from '../images/zeytinyag.png';
 import weddingPlace from '../images/wedding-place.jpg';
 
-const Location = () => {
+const Location: React.FC = () => {
 	return (
 		<>
 			<img

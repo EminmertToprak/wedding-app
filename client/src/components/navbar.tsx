@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/navbar.css';
 
@@ -11,22 +11,11 @@ const menuItems = [
 ];
 
 const Navbar: React.FC = () => {
-	const [showMenu, setShowMenu] = useState(false);
-
-	const toggleMenu = () => {
-		setShowMenu(!showMenu);
-	};
-
 	return (
 		<div className="navbar">
 			<div className="menu-items">
 				{menuItems.map((item, index) => (
-					<Link
-						key={index}
-						className="menu-button"
-						to={item.path}
-						onClick={toggleMenu}
-					>
+					<Link key={index} className="menu-button" to={item.path}>
 						{item.label}
 					</Link>
 				))}

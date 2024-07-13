@@ -6,34 +6,11 @@ import ariciportrait from '../images/nabi_kadriye.png';
 import toprakportrait from '../images/tekin_ayla.png';
 import weddingplace from '../images/marenostrum.png';
 import Footer from '../components/Footer.tsx';
-import flowerTopLeft from '../images/flowers_top_left.png';
-import flowerTopRight from '../images/flowers_top_right.png';
-import flowerBottomLeft from '../images/flowers_bottom_left.png';
-import flowerBottomRight from '../images/flowers_bottom_right.png';
-
-function Contact(props): JSX.Element {
+import renderFlowers from '../components/Flowers.tsx';
+const Contact: React.FC = (props) => {
 	return (
 		<>
-			<img
-				className="top-left-flower-contact"
-				src={flowerTopLeft}
-				alt="flower_top_left"
-			/>
-			<img
-				className="top-right-flower-contact"
-				src={flowerTopRight}
-				alt="flower_top_right"
-			/>
-			<img
-				className="bottom-left-flower-contact"
-				src={flowerBottomLeft}
-				alt="flower_bottom_left"
-			/>
-			<img
-				className="bottom-right-flower-contact"
-				src={flowerBottomRight}
-				alt="flower_bottom_right"
-			/>
+			{renderFlowers('contact')}
 			<div className="contacts">
 				<div className="ece-mert-info">
 					<img className="image" src={ecemertportrait} alt="Ece & Mert" />
@@ -83,6 +60,6 @@ function Contact(props): JSX.Element {
 			</div>
 		</>
 	);
-}
+};
 
 export default Contact;

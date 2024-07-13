@@ -10,7 +10,7 @@ import '../css/Homepage.css';
 import '../css/footer.css';
 import Footer from '../components/Footer.tsx';
 
-function Homepage(props) {
+const Homepage: React.FC = () => {
 	return (
 		<>
 			<div className="images">
@@ -118,6 +118,6 @@ function Homepage(props) {
 			</div>
 		</>
 	);
-}
+};
 
 export default Homepage;

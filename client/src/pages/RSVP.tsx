@@ -3,7 +3,7 @@ import Footer from '../components/Footer.tsx';
 import '../css/rsvp.css';
 import '../css/footer.css';
 import React from 'react';
-function RSVP(): JSX.Element {
+const RSVP: React.FC = () => {
 	return (
 		<>
 			<div className="div-form">
@@ -12,6 +12,6 @@ function RSVP(): JSX.Element {
 			</div>
 		</>
 	);
-}
+};
 
 export default RSVP;

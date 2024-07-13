@@ -2,35 +2,12 @@ import '../css/faq.css';
 import '../css/footer.css';
 import React from 'react';
 import Footer from '../components/Footer.tsx';
-import flowerTopLeft from '../images/flowers_top_left.png';
-import flowerTopRight from '../images/flowers_top_right.png';
-import flowerBottomLeft from '../images/flowers_bottom_left.png';
-import flowerBottomRight from '../images/flowers_bottom_right.png';
-
-function FAQ(props): JSX.Element {
+import renderFlowers from '../components/Flowers.tsx';
+const FAQ: React.FC = (props) => {
 	return (
 		<>
 			<div className="faq">
-				<img
-					className="top-left-flower-faq"
-					src={flowerTopLeft}
-					alt="flower_top_left"
-				/>
-				<img
-					className="top-right-flower-faq"
-					src={flowerTopRight}
-					alt="flower_top_right"
-				/>
-				<img
-					className="bottom-left-flower-faq"
-					src={flowerBottomLeft}
-					alt="flower_bottom_left"
-				/>
-				<img
-					className="bottom-right-flower-faq"
-					src={flowerBottomRight}
-					alt="flower_bottom_right"
-				/>
+				{renderFlowers('faq')}
 				<div>
 					<h1>Frequently Asked Questions</h1>
 				</div>
@@ -92,6 +69,6 @@ function FAQ(props): JSX.Element {
 			</div>
 		</>
 	);
-}
+};
 
 export default FAQ;

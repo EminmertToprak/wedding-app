@@ -27,8 +27,8 @@ const AdminTable: React.FC = () => {
 	return (
 		<div>
 			<ul>
-				{rsvps.map((rsvp) => (
-					<li key={rsvp.id}>
+				{rsvps.map((rsvp, i) => (
+					<li key={i + 1}>
 						{rsvp.name} - {rsvp.email} -{' '}
 						{rsvp.attending ? 'Attending' : 'Not Attending'}
 					</li>

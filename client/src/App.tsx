@@ -9,7 +9,7 @@ import Admin from './pages/Admin.tsx';
 import React from 'react';
 import './css/App.css';
 
-function App(): JSX.Element {
+const App: React.FC = () => {
 	return (
 		<>
 			<div className="App">
@@ -25,6 +25,6 @@ function App(): JSX.Element {
 			</div>
 		</>
 	);
-}
+};
 
 export default App;
