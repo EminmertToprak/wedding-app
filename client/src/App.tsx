@@ -5,7 +5,7 @@ import FAQ from './pages/FAQ.tsx';
 import Location from './pages/Location.tsx';
 import Contact from './pages/Contact.tsx';
 import Navbar from './components/Navbar.tsx';
-import AdminPage from './pages/Admin.tsx';
+import Admin from './pages/Admin.tsx';
 import React from 'react';
 import './css/App.css';
 
@@ -20,7 +20,7 @@ const App: React.FC = () => {
 					<Route path="/faq" element={<FAQ />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/location" element={<Location />} />
-					<Route path="/admin" element={<AdminPage />} />
+					<Route path="/admin" element={<Admin />} />
 				</Routes>
 			</div>
 		</>

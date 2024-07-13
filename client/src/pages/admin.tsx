@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/admin.css';
 import AdminTable from '../components/AdminTable.tsx';
 
-const AdminPage: React.FC = () => {
+const Admin: React.FC = () => {
 	return (
 		<div className="admin-page">
 			<h1 className="text-center">Admin Page - RSVP Elements</h1>
@@ -11,4 +11,4 @@ const AdminPage: React.FC = () => {
 	);
 };
 
-export default AdminPage;
+export default Admin;
